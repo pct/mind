@@ -405,7 +405,7 @@ section footer {
     bottom: 14px;
     position: absolute;
     right: 20px;
-    width: 150px;
+    width: auto;
 }
 #disqus_thread, .notes {
     background: none repeat scroll 0 0 #FFFFFF;
