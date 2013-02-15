@@ -560,3 +560,10 @@ section footer { background: #D1D1D1; }
 .footerwrap footer .link {
   margin: 14px;
 }
+
+.about h4, .social h4 {
+  border-bottom: 1px dashed #E5E3E4;
+  line-height: 20px;
+  margin-bottom: 12px;
+  padding-bottom: 6px;
+}
