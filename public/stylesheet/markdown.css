@@ -36,6 +36,21 @@
  *      0.9 增加限制图片的宽度
  *          增加section与article标签的支持
  *          使pre标签不会自动换行
+ *          移动@font-family到config.less中，使其可配置
+ *          增加配置@code-font-family
+ *      1.0 增加配置@use-index
+ *          重新修改全部样式，支持vertical rhythm，更适合阅读
+ *          去掉不必要的配置
+ *          直接子元素为img时，默认其为block元素
+ *          去掉了border相关的样式
+ *      1.1 使用px替换em
+ *          改进排版，去掉了些可配置项
+ *          基础less选择器修改为ext-entry
+ *      1.2 修改布局的实现方式
+ *          修复hr的位置
+ *          修复无标签文字位置的bug
+ *          修改code的默认背景色
+ *          默认关闭缩近选项
  *
  */
 /* ===========================================================
@@ -44,9 +59,60 @@
 /* ==========================================================
    Optional config
    ========================================================== */
-/* ==========================================================================
-   Entry header
-   ========================================================================== */
+/*
+ * bug 太多，用途不够广泛
+ * 对于pre th td这样的标签就会在firefox下有很多bug
+.fake-border-top-bottom (@color: #CCC, @width: 1px) {
+    position: relative;
+    &:before,
+    &:after {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        width: 100%;
+        height: @width;
+        background-color: @color;
+    }
+    &:before {
+        top: 0;
+        left: 0;
+    }
+    &:after {
+        bottom: 0;
+        left: 0;
+    }
+}
+.fake-border-bottom (@color: #CCC, @width: 1px) {
+    position: relative;
+    &:after {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        width: 100%;
+        height: @width;
+        background-color: @color;
+    }
+    &:after {
+        bottom: 0;
+        left: 0;
+    }
+}
+.fake-border-top (@color: #CCC, @width: 1px) {
+    position: relative;
+    &:before {
+        position: absolute;
+        z-index: 1;
+        content: '';
+        width: 100%;
+        height: @width;
+        background-color: @color;
+    }
+    &:before {
+        top: 0;
+        left: 0;
+    }
+}
+*/
 /* ==========================================================================
    Entry content
    ========================================================================== */
@@ -54,13 +120,28 @@
    Multi-column
    多栏样式，很多浏览器不支持，慎用！
    ================================================ */
-.markdown {
+body {
+  padding: 0;
   margin: 0;
-  line-height: 1.62;
+}
+.markdown {
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 560px;
+  padding: 0 14px;
+  line-height: 2;
   color: #666666;
   word-wrap: break-word;
   font-size: 14px;
-  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", "Lucida Grande", "Hiragino Sans GB", "Hiragino Sans GB W3", "Microsoft YaHei", "wenquanyi micro hei", sans-serif;
+  font-family: "ff-tisa-web-pro-1", "ff-tisa-web-pro-2", /* typekit */
+ "Lucida Grande", /* mac */
+ "Hiragino Sans GB", "Hiragino Sans GB W3", /* mac */
+ "Microsoft YaHei", /* windows */
+ "wenquanyi micro hei", /* linux */
+ sans-serif;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -69,6 +150,13 @@
        ========== */
 
   /* === block content === */
+
+  /*
+    > pre {
+        // pre上间距为： @font-size * (14 / 16) * @line-height * @font-size * (16 / 14) = h
+        margin-top: @line-height * @font-size * 16 / 14;
+    }
+    */
 
   /* === inline content === */
 
@@ -112,11 +200,8 @@
 .markdown iframe,
 .markdown section,
 .markdown article {
-  margin-top: 0.5em;
+  margin-top: 0;
   margin-bottom: 0;
-  margin-left: 0;
-  margin-left: auto;
-  margin-right: auto;
   padding: 0;
 }
 .markdown h1:first-child,
@@ -154,20 +239,11 @@
 .markdown > figure,
 .markdown > iframe,
 .markdown > section,
-.markdown > article {
-  max-width: 600px;
-  margin-top: 1em;
+.markdown > article,
+.markdown > img {
+  margin-top: 28px;
   margin-bottom: 0;
   display: block;
-  margin-left: 0;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 0 1em;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
 }
 .markdown > table {
   display: table;
@@ -182,7 +258,6 @@
 }
 .markdown h1,
 .markdown h2 {
-  font-size: 2em;
   color: #666666;
   background-color: transparent;
 }
@@ -200,81 +275,78 @@
 .markdown h2 abbr[title] {
   border-bottom-color: #666666;
 }
+.markdown h1 {
+  font-size: 28px;
+  line-height: 56px;
+  text-align: center;
+}
 .markdown > h1 {
-  padding-right: 0.5em;
-  padding-left: 0.5em;
+  margin-top: 28px;
 }
 .markdown h2 {
-  font-size: 1.5em;
+  font-size: 21px;
+  line-height: 28px;
+  text-align: center;
 }
 .markdown > h2 {
-  padding-right: 0.6666666666666666em;
-  padding-left: 0.6666666666666666em;
+  margin-top: 28px;
 }
 .markdown h3 {
-  font-size: 1.2em;
+  font-size: 16.8px;
+  line-height: 28px;
+  text-align: left;
 }
 .markdown > h3 {
-  padding-right: 0.7692307692307692em;
-  padding-left: 0.7692307692307692em;
+  margin-top: 28px;
 }
-.markdown h4:before,
-.markdown h5:before,
-.markdown h6:before {
-  content: '　　';
-  display: inline;
-}
-.markdown p:before,
-.markdown div:before {
-  content: '　　';
-  display: inline;
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  line-height: 28px;
+  font-size: 14px;
+  text-align: left;
 }
 .markdown blockquote {
   position: relative;
-  padding: 1em 4em;
-}
-.markdown blockquote div:before,
-.markdown blockquote p:before {
-  content: '';
+  padding: 28px 56px;
 }
 .markdown blockquote:before {
   position: absolute;
   content: '\275D';
   top: 0;
-  left: 1em;
-  font-size: 2em;
+  left: 14px;
+  font-size: 3em;
   color: #cccccc;
 }
 .markdown blockquote:after {
   position: absolute;
   content: '\275E';
   bottom: 0;
-  right: 1em;
+  right: 14px;
   margin-right: -0.25em;
-  font-size: 2em;
+  font-size: 3em;
   color: #cccccc;
 }
 .markdown pre {
-  padding: 1em 4em;
-  line-height: 1.5;
+  padding: 13px 14px;
+  line-height: 28px;
+  font-size: 14px;
   white-space: pre;
   word-wrap: normal;
   overflow: auto;
   font-family: monospace, serif;
-  font-size: 0.8571428571428571em;
   border: 1px solid #e1e1e8;
   border-right: none;
   border-left: none;
-  background-color: #fbfbfb;
+  background-color: #f7f7f9;
 }
 .markdown ul,
 .markdown ol {
-  margin-top: 1em;
-  padding-left: 4em;
+  margin-top: 28px;
+  padding-left: 56px;
 }
 .markdown ul li,
 .markdown ol li {
-  margin-top: 0.25em;
   list-style-position: outside;
 }
 .markdown ul li:first-child,
@@ -302,41 +374,29 @@
 .markdown li > ul,
 .markdown li > ol {
   margin-top: 0;
-  padding-left: 3em;
-}
-.markdown li > p:first-child:before,
-.markdown li > div:first-child:before {
-  content: '';
+  padding-left: 42px;
 }
 .markdown hr {
   position: relative;
-  margin-top: 3em;
-  margin-bottom: 3em;
-  margin-left: 0;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 600px;
+  padding-top: 28px;
+  margin-bottom: 56px;
+  margin-top: -2px;
   height: 0;
   background: none;
   border: none;
   border-bottom: 2px dashed #888888;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  -o-box-sizing: border-box;
-  box-sizing: border-box;
 }
 .markdown hr:before,
 .markdown hr:after {
   content: '';
   position: absolute;
+  bottom: -2px;
   width: 30%;
   height: 2px;
   pointer-events: none;
 }
 .markdown hr:before {
   left: 0;
-  right: auto;
   background-image: -webkit-linear-gradient(right, rgba(255, 255, 255, 0) 0%, #ffffff 80%, #ffffff 100%);
   background-image: -moz-linear-gradient(right, rgba(255, 255, 255, 0) 0%, #ffffff 80%, #ffffff 100%);
   background-image: -ms-linear-gradient(right, rgba(255, 255, 255, 0) 0%, #ffffff 80%, #ffffff 100%);
@@ -344,7 +404,6 @@
   background-image: linear-gradient(right, rgba(255, 255, 255, 0) 0%, #ffffff 80%, #ffffff 100%);
 }
 .markdown hr:after {
-  top: 0;
   right: 0;
   background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 80%, #ffffff 100%);
   background-image: -moz-linear-gradient(left, rgba(255, 255, 255, 0) 0%, #ffffff 80%, #ffffff 100%);
@@ -354,12 +413,11 @@
 }
 .markdown table {
   padding: 0;
-  margin-left: 1em;
   margin-left: auto;
-  min-width: 300px;
+  margin-right: auto;
+  min-width: 294px;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid #dddddd;
   -webkit-border-radius: 0.5em;
   -moz-border-radius: 0.5em;
   -ms-border-radius: 0.5em;
@@ -367,36 +425,35 @@
   border-radius: 0.5em;
 }
 .markdown table caption {
-  padding: 0.5em 0 0.25em;
+  padding: 14px 0;
 }
 .markdown table thead th {
   text-align: left;
 }
 .markdown table tbody {
-  margin: 0 1em;
-}
-.markdown table tbody td,
-.markdown table tbody th {
-  border-top: 1px solid #dddddd;
+  margin: 0 14px;
 }
 .markdown table tbody tr:nth-child(odd) td,
 .markdown table tbody tr:nth-child(odd) th {
   background-color: #f9f9f9;
 }
+.markdown table tbody tr:last-child td,
+.markdown table tbody tr:last-child th {
+  padding-bottom: 12px;
+}
 .markdown table td,
 .markdown table th {
-  padding: 0.5em 1em;
-  border-left: 1px solid #dddddd;
+  padding: 14px 14px 13px;
+  border: 1px solid #dddddd;
 }
-.markdown table td:first-child,
-.markdown table th:first-child {
-  border-left: none;
+.markdown iframe {
+  vertical-align: text-bottom;
 }
 .markdown a {
   padding-bottom: 0.025em;
   color: #006699;
   text-decoration: none;
-  border-bottom-color: #006699;
+  border-bottom-color: #0088cc;
 }
 .markdown a[onclick],
 .markdown a[href^="javascript:"] {
@@ -440,7 +497,7 @@
   padding-bottom: .05em;
   font-style: normal;
   font-weight: normal;
-  border-bottom: 2px dotted #666666;
+  border-bottom: 2px dotted #b3b3b3;
 }
 .markdown u {
   text-decoration: none;
@@ -456,11 +513,11 @@
 .markdown code {
   padding: 0.15em 0.25em;
   margin: 0 0.25em;
-  background: #fefefe;
+  background: #fee9cc;
   font-family: monospace, serif;
   font-size: 0.8571428571428571em;
-  color: #dd1144;
-  border: 1px solid #e1e1e8;
+  color: #666666;
+  border: 1px solid transparent;
   -webkit-border-radius: 0.25em;
   -moz-border-radius: 0.25em;
   -ms-border-radius: 0.25em;
@@ -470,25 +527,24 @@
 .markdown pre code {
   padding: 0;
   margin: 0;
-  font-size: 1em;
+  font-size: 14px;
   color: #666666;
   background: none;
   border: none;
 }
 .markdown img {
-  max-width: 600px;
+  max-width: 100%;
   border: 0;
+}
+.markdown > img {
+  max-width: 100%;
 }
 .markdown figure img {
   display: block;
   margin: 0 auto;
-  padding: 0.5em;
-  max-width: 97%;
-  border: 1px solid #cccccc;
 }
 .markdown figure figcaption {
   display: block;
-  margin-top: 0.5em;
   text-align: center;
   font-style: italic;
 }
@@ -535,5 +591,5 @@
   bottom: -0.25em;
 }
 .markdown #disqus_thread {
-  margin-top: 2em;
+  margin-top: 28px;
 }

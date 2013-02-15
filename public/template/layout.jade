@@ -1,19 +1,56 @@
 !!!
 html
-	head
-		include includes/head
-		block stylesheet
-	body
-		div.container
-			div.head-bg
-				input#infoTrigger.head-info-trigger(type="checkbox")
-				div.head
-					h1
-						a(href="/") #{site.name}
-					div.head-meta #{site.description}
-					label#infoTriggerLabel.head-more(for="infoTrigger", onclick="")
-				include includes/info
-			div.main
-				block content
-		include includes/ga
-		block script
+  head
+    include includes/head
+    block stylesheet
+  body
+    .container
+      header
+        .logo
+          h1
+            a(href='/') #{site.name}
+          
+          h2 #{site.description}
+
+        //
+           End logo 
+      //
+         End Header 
+
+      .main
+        section
+          block content
+        section
+          block article
+        section
+          block archive
+      //
+         End Main 
+      aside
+        .social
+          include includes/social
+        .about
+          include includes/about
+          include includes/work
+      //
+         End Aside
+      .footer_right
+        p Powered by 
+          a(href="https://github.com/pct/4press", target="_blank") 4press
+        
+    //
+      End Container
+
+    include includes/script
+    include includes/ga
+    block script
+
+
+
+
+
+
+
+
+
+

@@ -1,12 +1,14 @@
 extends layout
 
 append content
-	- if (items.length)
-		div.list
-			h2 Articles
-			ul
-				- items.forEach(function(item) {
-					li
-						a(href="#{item.url}", title="#{item.title}") #{item.title}
-						time #{item.time}
-				- })
+  - if (items.length)
+    article
+      .inner.text_post
+        h2 Articles
+        ul
+          - items.forEach(function(item) {
+            li
+              a(href="#{item.url}", title="#{item.title}") #{item.title}
+              p.footerwrap #{item.time}
+          - })
+

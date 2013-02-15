@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Fri, 15 Feb 2013 08:23:14 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Hello, world]]></title><description><![CDATA[<h1>Hello, world</h1>
+<p>又再次任性以為自己可以用喜歡的方式寫 blog，所以 clone 了對岸高手寫的 blogin, 重組、改寫成 <a href="https://github.com/pct/4press">4press</a>。</p>
+<p>Just another blog system using node.js and build static html pages.</p>
+<p>希望別再改了，希望是個新開始。</p>
+<p>Hello, world.</p>
+<p>Keep going!</p>
+]]></description><link>/post/2013/hello-world.html</link><guid isPermaLink="true">/post/2013/hello-world.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Thu, 14 Feb 2013 00:07:46 GMT</pubDate></item></channel></rss>
