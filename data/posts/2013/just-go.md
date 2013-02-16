@@ -12,3 +12,10 @@ just go
 然後配合 [這個教學](http://tour.golang.org/#1)，開始 go 吧！
 
 <del>不過還是覺得 [Effective Go](http://golang.org/doc/effective_go.html) 可以比較快看全部語法</del>
+
+相關資源：
+
+1. http://www.plurk.com/p/i5y4k3
+2. http://www.golang-book.com/
+3. http://www.miek.nl/projects/gobook/
+4. [簡體中文 build-web-application-with-golang](https://github.com/astaxie/build-web-application-with-golang/blob/master/preface.md)
