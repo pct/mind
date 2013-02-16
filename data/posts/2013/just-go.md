@@ -10,3 +10,5 @@ just go
 `Bundle 'nsf/gocode', {'rtp': 'vim/'}`
 
 然後配合 [這個教學](http://tour.golang.org/#1)，開始 go 吧！
+
+<del>不過還是覺得 [Effective Go](http://golang.org/doc/effective_go.html) 可以比較快看全部語法</del>
