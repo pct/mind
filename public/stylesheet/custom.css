@@ -15,3 +15,7 @@ article h1 {
 article h1 a {
     color: #3A3A3A;
 }
+
+.idc-right {
+  display: none!important;
+}
