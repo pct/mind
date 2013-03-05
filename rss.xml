@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Fri, 22 Feb 2013 10:44:28 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[加入四點設計，開始設計自己的人生]]></title><description><![CDATA[<h1>加入四點設計，開始設計自己的人生</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Tue, 05 Mar 2013 04:00:39 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題]]></title><description><![CDATA[<h1>在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題</h1>
+<p>其實，善心的保哥已經在這篇文章 <a href="http://blog.miniasp.com/post/2012/05/12/How-to-correct-unzip-Mac-format-ZIP-file-with-chinese-filename-in-Windows.aspx">在 Mac 電腦壓縮的 ZIP 檔案如何正確在 Windows 下解壓縮</a> 告訴我們如果在 windows 要如何解決收到 Mac 來的壓縮檔總是亂碼的問題。</p>
+<p>不過我因為情況不同，所以角度是 Mac user 提供壓縮檔給 Windows user，其解決方法如下(這裡提供的 command line 解決方案，或自行尋找 7zip on mac)：</p>
+<ol>
+<li><p>安裝 7zip</p>
+<pre><code> $ brew install p7zip</code></pre>
+</li>
+<li><p>直接用 7zip 壓縮檔案</p>
+<pre><code> $ cd 你的檔案位置
+ $ 7za a 你要的檔名</code></pre>
+</li>
+</ol>
+<p>就這樣，把壓縮好的檔案直接傳給你的朋友試試看 :)</p>
+<p><del>就這樣，一篇廢文又產生了，我才不信已經用 homebrew 的人會需要看這種文章，看到標題就夠了；所以這篇只是給自己看的沒錯(蓋章)</del></p>
+]]></description><link>/post/2013/mac-users-could-use-7zip-to-compress-files-for-windows-users.html</link><guid isPermaLink="true">/post/2013/mac-users-could-use-7zip-to-compress-files-for-windows-users.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Tue, 05 Mar 2013 03:25:10 GMT</pubDate></item><item><title><![CDATA[blog test]]></title><description><![CDATA[<h1>blog test</h1>
+<p><del>對啦，有沒有自己要寫 blog 前還要自己修一下自己亂改的 blog 系統的八卦？</del></p>
+<p>沒錯，本篇是很廢的測試文章，自己測試自己留言 Orz...</p>
+]]></description><link>/post/2013/blog-test.html</link><guid isPermaLink="true">/post/2013/blog-test.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Wed, 20 Feb 2013 22:23:49 GMT</pubDate></item><item><title><![CDATA[Hello, world]]></title><description><![CDATA[<h1>Hello, world</h1>
+<p>又再次任性以為自己可以用喜歡的方式寫 blog，所以 clone 了對岸高手寫的 blogin, 重組、改寫成 <a href="https://github.com/pct/4press">4press</a>。</p>
+<p>Just another blog system using node.js and build static html pages.</p>
+<p>希望別再改了，希望是個新開始。</p>
+<p>Hello, world.</p>
+<p>Keep going!</p>
+]]></description><link>/post/2013/hello-world.html</link><guid isPermaLink="true">/post/2013/hello-world.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Thu, 14 Feb 2013 00:07:46 GMT</pubDate></item><item><title><![CDATA[just go]]></title><description><![CDATA[<h1>just go</h1>
+<p>以為年假收假前抱抱女兒浪費一下光陰就算了，沒想到 c9s 大大連續轉貼幾篇 go 的文章：<a href="http://www.kunli.info/2012/03/03/golang-feeling/">使用Go语言一段时间的感受</a>、<a href="http://blog.codingnow.com/2010/11/go_prime.html">Go 语言初步</a>，而且 c9s 大大也用 go 開發了 <a href="http://gotray.extremedev.org/">GoTray</a>，實在是<del>太黯然、太銷魂了</del>。</p>
+<p>那麼，也跟著開始 go 吧，雖然之前總是沒有好好學習。</p>
+<p>由於是 vim 愛好者，所以請在 .vimrc 加入這行<del>對啦，我改用 Vundle 了</del>：</p>
+<p><code>Bundle &#39;nsf/gocode&#39;, {&#39;rtp&#39;: &#39;vim/&#39;}</code></p>
+<p>然後配合 <a href="http://tour.golang.org/#1">這個教學</a>，開始 go 吧！</p>
+<p><del>不過還是覺得 <a href="http://golang.org/doc/effective_go.html">Effective Go</a> 可以比較快看全部語法</del></p>
+<p>相關資源：</p>
+<ol>
+<li><a href="http://www.plurk.com/p/i5y4k3">http://www.plurk.com/p/i5y4k3</a></li>
+<li><a href="http://www.golang-book.com/">http://www.golang-book.com/</a></li>
+<li><a href="http://www.miek.nl/projects/gobook/">http://www.miek.nl/projects/gobook/</a></li>
+<li><a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/preface.md">簡體中文 build-web-application-with-golang</a></li>
+</ol>
+]]></description><link>/post/2013/just-go.html</link><guid isPermaLink="true">/post/2013/just-go.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Fri, 15 Feb 2013 22:58:34 GMT</pubDate></item><item><title><![CDATA[加入四點設計，開始設計自己的人生]]></title><description><![CDATA[<h1>加入四點設計，開始設計自己的人生</h1>
 <p><img src="http://4point-inc.com/sandra.jpg" alt=""></p>
 <h2>前情提要</h2>
 <p><a href="http://4point-inc.com">四點設計</a>因為客戶對我們還不錯，所以在未來預期的日子裡，我們需要請您來幫忙，讓四點設計可以繼續成長、茁壯！在此也感謝大家的幫忙與相挺。</p>
@@ -94,27 +131,4 @@
 <p>四點設計歡迎您！</p>
 <p><img src="http://4point-inc.com/rails.jpg" alt=""></p>
 <p><a href="mailto:pct@4point-inc.com">請趕快寄信給 pct 吧</a></p>
-]]></description><link>/post/2013/please-join-4point-design.html</link><guid isPermaLink="true">/post/2013/please-join-4point-design.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Fri, 22 Feb 2013 02:01:44 GMT</pubDate></item><item><title><![CDATA[blog test]]></title><description><![CDATA[<h1>blog test</h1>
-<p><del>對啦，有沒有自己要寫 blog 前還要自己修一下自己亂改的 blog 系統的八卦？</del></p>
-<p>沒錯，本篇是很廢的測試文章，自己測試自己留言 Orz...</p>
-]]></description><link>/post/2013/blog-test.html</link><guid isPermaLink="true">/post/2013/blog-test.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Wed, 20 Feb 2013 22:23:49 GMT</pubDate></item><item><title><![CDATA[Hello, world]]></title><description><![CDATA[<h1>Hello, world</h1>
-<p>又再次任性以為自己可以用喜歡的方式寫 blog，所以 clone 了對岸高手寫的 blogin, 重組、改寫成 <a href="https://github.com/pct/4press">4press</a>。</p>
-<p>Just another blog system using node.js and build static html pages.</p>
-<p>希望別再改了，希望是個新開始。</p>
-<p>Hello, world.</p>
-<p>Keep going!</p>
-]]></description><link>/post/2013/hello-world.html</link><guid isPermaLink="true">/post/2013/hello-world.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Thu, 14 Feb 2013 00:07:46 GMT</pubDate></item><item><title><![CDATA[just go]]></title><description><![CDATA[<h1>just go</h1>
-<p>以為年假收假前抱抱女兒浪費一下光陰就算了，沒想到 c9s 大大連續轉貼幾篇 go 的文章：<a href="http://www.kunli.info/2012/03/03/golang-feeling/">使用Go语言一段时间的感受</a>、<a href="http://blog.codingnow.com/2010/11/go_prime.html">Go 语言初步</a>，而且 c9s 大大也用 go 開發了 <a href="http://gotray.extremedev.org/">GoTray</a>，實在是<del>太黯然、太銷魂了</del>。</p>
-<p>那麼，也跟著開始 go 吧，雖然之前總是沒有好好學習。</p>
-<p>由於是 vim 愛好者，所以請在 .vimrc 加入這行<del>對啦，我改用 Vundle 了</del>：</p>
-<p><code>Bundle &#39;nsf/gocode&#39;, {&#39;rtp&#39;: &#39;vim/&#39;}</code></p>
-<p>然後配合 <a href="http://tour.golang.org/#1">這個教學</a>，開始 go 吧！</p>
-<p><del>不過還是覺得 <a href="http://golang.org/doc/effective_go.html">Effective Go</a> 可以比較快看全部語法</del></p>
-<p>相關資源：</p>
-<ol>
-<li><a href="http://www.plurk.com/p/i5y4k3">http://www.plurk.com/p/i5y4k3</a></li>
-<li><a href="http://www.golang-book.com/">http://www.golang-book.com/</a></li>
-<li><a href="http://www.miek.nl/projects/gobook/">http://www.miek.nl/projects/gobook/</a></li>
-<li><a href="https://github.com/astaxie/build-web-application-with-golang/blob/master/preface.md">簡體中文 build-web-application-with-golang</a></li>
-</ol>
-]]></description><link>/post/2013/just-go.html</link><guid isPermaLink="true">/post/2013/just-go.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Fri, 15 Feb 2013 22:58:34 GMT</pubDate></item></channel></rss>
+]]></description><link>/post/2013/please-join-4point-design.html</link><guid isPermaLink="true">/post/2013/please-join-4point-design.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Fri, 22 Feb 2013 02:01:44 GMT</pubDate></item></channel></rss>
