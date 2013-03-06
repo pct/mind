@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 06 Mar 2013 07:22:56 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題]]></title><description><![CDATA[<h1>在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 06 Mar 2013 07:33:43 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題]]></title><description><![CDATA[<h1>在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題</h1>
 <p>其實，善心的保哥已經在這篇文章 <a href="http://blog.miniasp.com/post/2012/05/12/How-to-correct-unzip-Mac-format-ZIP-file-with-chinese-filename-in-Windows.aspx">在 Mac 電腦壓縮的 ZIP 檔案如何正確在 Windows 下解壓縮</a> 告訴我們如果在 windows 要如何解決收到 Mac 來的壓縮檔總是亂碼的問題。</p>
 <p>不過我因為情況不同，所以角度是 Mac user 提供壓縮檔給 Windows user，其解決方法如下(這裡提供的 command line 解決方案，或自行尋找 7zip on mac)：</p>
 <ol>
@@ -14,7 +14,13 @@
 <p>就這樣，把壓縮好的檔案直接傳給你的朋友試試看 :)</p>
 <p><del>就這樣，一篇廢文又產生了，我才不信已經用 homebrew 的人會需要看這種文章，看到標題就夠了；所以這篇只是給自己看的沒錯(蓋章)</del></p>
 ]]></description><link>/post/2013/mac-users-could-use-7zip-to-compress-files-for-windows-users.html</link><guid isPermaLink="true">/post/2013/mac-users-could-use-7zip-to-compress-files-for-windows-users.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Tue, 05 Mar 2013 03:25:10 GMT</pubDate></item><item><title><![CDATA[[四點設計]文件分享-勞保、健保、勞退三合一表單]]></title><description><![CDATA[<h1>[四點設計]文件分享-勞保、健保、勞退三合一表單</h1>
-<p>對，每次幫大家加薪的時候，你會用到這張，<a href="http://www.bli.gov.tw/sub.aspx?a=umSMW5tDZMI%3D">這邊可以下載</a></p>
+<p>對，每次幫大家加薪，或公司增加人手的時候，你會用到這些：</p>
+<ol>
+<li><p><a href="http://www.bli.gov.tw/sub.aspx?a=J2aZevv6L6Y%3d">調整薪資用的</a></p>
+</li>
+<li><p><a href="http://www.bli.gov.tw/sub.aspx?a=umSMW5tDZMI%3D">增加人手用的</a></p>
+</li>
+</ol>
 <p><del>這樣也算一篇？當然算啊！</del></p>
 ]]></description><link>/post/2013/4point-doc-3-in-1-form-for-staff.html</link><guid isPermaLink="true">/post/2013/4point-doc-3-in-1-form-for-staff.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Tue, 05 Mar 2013 19:19:39 GMT</pubDate></item><item><title><![CDATA[[四點設計]文件分享-新生兒健保申請 ]]></title><description><![CDATA[<h1>[四點設計]文件分享-新生兒健保申請 </h1>
 <ol>
