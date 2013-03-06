@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Tue, 05 Mar 2013 04:00:39 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題]]></title><description><![CDATA[<h1>在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 06 Mar 2013 00:45:34 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題]]></title><description><![CDATA[<h1>在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題</h1>
 <p>其實，善心的保哥已經在這篇文章 <a href="http://blog.miniasp.com/post/2012/05/12/How-to-correct-unzip-Mac-format-ZIP-file-with-chinese-filename-in-Windows.aspx">在 Mac 電腦壓縮的 ZIP 檔案如何正確在 Windows 下解壓縮</a> 告訴我們如果在 windows 要如何解決收到 Mac 來的壓縮檔總是亂碼的問題。</p>
 <p>不過我因為情況不同，所以角度是 Mac user 提供壓縮檔給 Windows user，其解決方法如下(這裡提供的 command line 解決方案，或自行尋找 7zip on mac)：</p>
 <ol>
 <li><p>安裝 7zip</p>
-<pre><code> $ brew install p7zip</code></pre>
+<p> <code>$ brew install p7zip</code></p>
 </li>
 <li><p>直接用 7zip 壓縮檔案</p>
-<pre><code> $ cd 你的檔案位置
- $ 7za a 你要的檔名</code></pre>
+<p> <code>$ cd 你的檔案位置</code></p>
+<p> <code>$ 7za a 你要的檔名</code></p>
 </li>
 </ol>
 <p>就這樣，把壓縮好的檔案直接傳給你的朋友試試看 :)</p>

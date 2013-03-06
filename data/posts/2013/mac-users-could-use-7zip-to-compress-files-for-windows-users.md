@@ -7,12 +7,13 @@
 
 1. 安裝 7zip
 
-		$ brew install p7zip
+	`$ brew install p7zip`
 
 2. 直接用 7zip 壓縮檔案
 
-		$ cd 你的檔案位置
-		$ 7za a 你要的檔名
+	`$ cd 你的檔案位置`
+
+	`$ 7za a 你要的檔名`
 		
 就這樣，把壓縮好的檔案直接傳給你的朋友試試看 :)
 
