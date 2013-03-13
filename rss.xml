@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Thu, 07 Mar 2013 09:10:33 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA["No value was provided for the parameter certificateIds"]]></title><description><![CDATA[<h1>&quot;No value was provided for the parameter certificateIds&quot;</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 13 Mar 2013 04:59:11 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails sqlite3 to mysql migration]]></title><description><![CDATA[<h1>rails sqlite3 to mysql migration</h1>
+<h2>情境</h2>
+<p>就是資料庫從 sqlite3 轉成使用 mysql。因為目前資料庫內容還算簡單，所以可以這樣作</p>
+<h2>步驟</h2>
+<ol>
+<li><p>修改 <code>Gemfile</code>，加入：</p>
+<p> <code>gem &#39;mysql2&#39;</code></p>
+<p> <code>gem &#39;yaml_db&#39;</code></p>
+</li>
+<li><p>bundle 一下，安裝剛剛那兩個 gem：</p>
+<p> <code>$ bundle</code></p>
+</li>
+<li><p>備份一下你的 db 設定檔</p>
+<p> <code>$ cp config/database.yml config/database.yml.sqlite3</code></p>
+</li>
+<li><p>把 DB 資料 dump 出來</p>
+<p> <code>$ rake db:dump</code></p>
+</li>
+<li><p>改一下 <code>config/database.yml</code>，把 <code>sqlite3</code> 換成 <code>mysql2</code></p>
+</li>
+<li><p>到 mysql 建資料庫</p>
+<p> <code>rake db:setup</code></p>
+<p> <code>rake db:schema:load</code></p>
+</li>
+<li><p>把剛剛 <code>db:dump</code> 結果再 <code>load</code> 回去</p>
+<p> <code>rake db:load</code></p>
+</li>
+</ol>
+<h2>參考資料</h2>
+<ol>
+<li><a href="http://stackoverflow.com/questions/1670154/convert-a-ruby-on-rails-app-from-sqlite-to-mysql">Convert a Ruby on Rails app from sqlite to MySQL?</a></li>
+</ol>
+<h2>結語</h2>
+<p><del>不免俗又是廢文一篇，其實 google 就會幫你找到解答了，對吧？</del></p>
+]]></description><link>/post/2013/rails-sqlite3-to-mysql-migration.html</link><guid isPermaLink="true">/post/2013/rails-sqlite3-to-mysql-migration.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Wed, 13 Mar 2013 04:44:06 GMT</pubDate></item><item><title><![CDATA["No value was provided for the parameter certificateIds"]]></title><description><![CDATA[<h1>&quot;No value was provided for the parameter certificateIds&quot;</h1>
 <p>對啦，會遇到這種事真的很奇怪，按下 renew 是沒有反應的，會出現 這樣的 alert：</p>
 <p><code>No value was provided for the parameter certificateIds</code></p>
 <p><img src="http://mind.deep.tw/images/foo/renew_fail.png" alt=""></p>
