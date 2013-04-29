@@ -60,6 +60,11 @@
             "file": "data/posts/2013/welcome-new-partner.md",
             "ctime": "2013-03-18 11:53:00",
             "mtime": "2013-03-18 11:53:00"
+        },
+        {
+            "file": "data/posts/2013/rails-csrf-notes.md",
+            "ctime": "2013-04-30 12:04:23",
+            "mtime": "2013-04-30 12:04:23"
         }
     ]
 }

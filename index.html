@@ -19,7 +19,40 @@
 <p>歡迎新夥伴的加入，感謝你加入四點設計 :)</p>
 <p>也歡迎大家有空路過忠孝新生時，可以來四點設計聊聊天，互通有無，尋找合作方向。</p>
 <p>感謝大家的幫忙，謝謝！</p>
-</div><div class="footerwrap"><footer><div class="date">2013-03-18 11:53:00</div><div class="link"><a href="/post/2013/welcome-new-partner.html">comments</a></div></footer></div></article><article><div class="inner text_post markdown"><h1>rails sqlite3 to mysql migration</h1>
+</div><div class="footerwrap"><footer><div class="date">2013-03-18 11:53:00</div><div class="link"><a href="/post/2013/welcome-new-partner.html">comments</a></div></footer></div></article><article><div class="inner text_post markdown"><h1>rails CSRF notes</h1>
+<h3>起源</h3>
+<p>在一個案子中，需要讓 user 不需「登入」就可以執行 post。然後不小心用 curl post 居然也可以寫入，實在令人驚訝！</p>
+<h3>環境</h3>
+<p>rails 3.2.13</p>
+<h3>發現</h3>
+<p>我們使用 ajax post 的方式來讓 user 貼文，不過這不是重點，重點是你的 post，不管是 ajax post, 一般 form post，或你遠端 curl post，你都可以發現你的 rails log 寫著：</p>
+<pre><code>WARNING: Can&#39;t verify CSRF token authenticity</code></pre>
+<p>BUT，這人生中最常出現的 BUT，會告訴你：</p>
+<pre><code>Completed 201 Created in 50ms (Views: 4.6ms | ActiveRecord: 1.6ms)</code></pre>
+<p><code>也就是你以為 rails 幫你擋下 CSRF，結果根本還是被寫入了</code></p>
+<h3>為什麼？</h3>
+<p>因為…讓我們來看連結：</p>
+<ol>
+<li><a href="http://stackoverflow.com/questions/7203304/warning-cant-verify-csrf-token-authenticity-rails?rq=1">有人有相同情形</a></li>
+<li><a href="http://stackoverflow.com/questions/5000333/how-does-rails-csrf-protection-work">所以解法在這裡</a></li>
+<li><a href="http://api.rubyonrails.org/classes/ActionController/RequestForgeryProtection.html#method-i-handle_unverified_request">為什麼會這樣</a></li>
+</ol>
+<p>白話翻譯：</p>
+<ol>
+<li><p>rails 的 CSRF 保護機制幫你判斷了非 GET 的操作但又沒提供 token，所以跟你說了：<code>WARNING: Can&#39;t verify CSRF token authenticity</code></p>
+</li>
+<li><p>rails 在沒有「登入」的狀況下，也沒幫你阻止，因為他預設的 <code>handle_unverified_request</code> 就只幫你做了 <code>reset_session</code></p>
+</li>
+<li><p>你沒有使用 session 機制, 你 reset session 根本阻止不了 CSRF，所以資料就這樣被警告一下，還是被寫入</p>
+</li>
+<li><p>你該怎麼辦？就直接在 ApplicationController 增加 <code>handle_unverified_request</code> 的 method, 自己判斷沒有 csrf-token 時該怎麼做吧</p>
+</li>
+</ol>
+<h3>結語</h3>
+<p>rails 很不安全，大家不要用？才不是，是因為我是初學者，這些眉眉角角都要自己學；相信強者大大們早就知道這些事了，所以這篇又是廢文了。</p>
+<p>那麼，廢文，咱們下篇見！ </p>
+<p>P.S. 因為是初學者，請各位大大們不吝指正，謝謝！</p>
+</div><div class="footerwrap"><footer><div class="date">2013-04-30 12:04:23</div><div class="link"><a href="/post/2013/rails-csrf-notes.html">comments</a></div></footer></div></article><article><div class="inner text_post markdown"><h1>rails sqlite3 to mysql migration</h1>
 <h2>情境</h2>
 <p>就是資料庫從 sqlite3 轉成使用 mysql。因為目前資料庫內容還算簡單，所以可以這樣作</p>
 <h2>步驟</h2>
@@ -222,7 +255,7 @@
 <p>希望別再改了，希望是個新開始。</p>
 <p>Hello, world.</p>
 <p>Keep going!</p>
-</div><div class="footerwrap"><footer><div class="date">2013-02-14 08:07:46</div><div class="link"><a href="/post/2013/hello-world.html">comments</a></div></footer></div></article></section><section><article><div class="inner text_post"><h2>Articles</h2><ul><li><a href="/post/2013/mac-users-could-use-7zip-to-compress-files-for-windows-users.html" title="在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題">在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題</a></li><li><a href="/post/2013/welcome-new-partner.html" title="welcome new partner">welcome new partner</a></li><li><a href="/post/2013/rails-sqlite3-to-mysql-migration.html" title="rails sqlite3 to mysql migration">rails sqlite3 to mysql migration</a></li><li><a href="/post/2013/rails_env-production-rails-s.html" title="RAILS_ENV=production rails s">RAILS_ENV=production rails s</a></li><li><a href="/post/2013/ios-develop-no-value-was-provided-for-the-parameter-certificateids.html" title="&quot;No value was provided for the parameter certificateIds&quot;">&quot;No value was provided for the parameter certificateIds&quot;</a></li><li><a href="/post/2013/titanium-tableview-class-name.html" title="titanium tableview class name">titanium tableview class name</a></li><li><a href="/post/2013/4point-doc-3-in-1-form-for-staff.html" title="[四點設計]文件分享-勞保、健保、勞退三合一表單">[四點設計]文件分享-勞保、健保、勞退三合一表單</a></li><li><a href="/post/2013/4point-doc-new-born-health-insurance.html" title="[四點設計]文件分享-新生兒健保申請 ">[四點設計]文件分享-新生兒健保申請 </a></li><li><a href="/post/2013/please-join-4point-design.html" title="加入四點設計，開始設計自己的人生">加入四點設計，開始設計自己的人生</a></li><li><a href="/post/2013/blog-test.html" title="blog test">blog test</a></li><li><a href="/post/2013/just-go.html" title="just go">just go</a></li><li><a href="/post/2013/hello-world.html" title="Hello, world">Hello, world</a></li></ul></div></article></section><section><article><div class="inner text_post"><h2>Archives</h2><ul><li><a href="/post/2013/" title="2013">2013</a></li></ul></div></article></section><div class="footer_right"><p>Powered by <a href="https://github.com/pct/4press" target="_blank">4press</a></p></div></div><!--<End>Main </End>--><aside><div class="social"><h4>Social Links</h4><ul class="no-svg"><li><a href="https://twitter.com/daniel_freebsd" target="_blank" class="fc-webicon twitter"></a></li><li><a href="http://about.me/linpct" target="_blank" class="fc-webicon aboutme"></a></li><li><a href="https://facebook.com/freebsd.py" target="_blank" class="fc-webicon facebook"></a></li><li><a href="https://github.com/pct" target="_blank" class="fc-webicon github"></a></li><li><a href="/rss.xml" class="fc-webicon rss"></a></li></ul><p class="clear"></p></div><div class="about"><h4>About me</h4><img src="/images/avatar.jpg" title="Daniel Lin"><p> </p><p>Daniel Lin, 網路暱稱 pct</p><p>專注在什麼都學，所以什麼都不專精</p><p>如果真要立個目標，那就是：<b>「為天地立心 為生民立命 為往聖繼絕學 為萬世開太平」</b></p><p>人生苦短，還想學的有：<b>中醫、武術</b>以及如何賺錢；趕快教我吧，拜託！</p><p> </p><h4>Work</h4><p> <b>A Web/App Developer</b></p><ul><li>php</li><li>python</li><li>ruby</li><li>javascript, coffeescript</li></ul><p>work for <b><a href="http://4point-inc.com" target="_blank">四點設計</a></b></p><p></p></div></aside><!--<End>Aside</End>--></div><!--<End>Container</End>--><script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><script src="http://static.tumblr.com/20pvjfl/e2Fla34af/html5.js"></script><script type="text/javascript">var _gaq = _gaq || [];
+</div><div class="footerwrap"><footer><div class="date">2013-02-14 08:07:46</div><div class="link"><a href="/post/2013/hello-world.html">comments</a></div></footer></div></article></section><section><article><div class="inner text_post"><h2>Articles</h2><ul><li><a href="/post/2013/mac-users-could-use-7zip-to-compress-files-for-windows-users.html" title="在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題">在 Mac 中用 7zip 壓縮檔案，給 Windows 用戶時就免除亂碼問題</a></li><li><a href="/post/2013/welcome-new-partner.html" title="welcome new partner">welcome new partner</a></li><li><a href="/post/2013/rails-csrf-notes.html" title="rails CSRF notes">rails CSRF notes</a></li><li><a href="/post/2013/rails-sqlite3-to-mysql-migration.html" title="rails sqlite3 to mysql migration">rails sqlite3 to mysql migration</a></li><li><a href="/post/2013/rails_env-production-rails-s.html" title="RAILS_ENV=production rails s">RAILS_ENV=production rails s</a></li><li><a href="/post/2013/ios-develop-no-value-was-provided-for-the-parameter-certificateids.html" title="&quot;No value was provided for the parameter certificateIds&quot;">&quot;No value was provided for the parameter certificateIds&quot;</a></li><li><a href="/post/2013/titanium-tableview-class-name.html" title="titanium tableview class name">titanium tableview class name</a></li><li><a href="/post/2013/4point-doc-3-in-1-form-for-staff.html" title="[四點設計]文件分享-勞保、健保、勞退三合一表單">[四點設計]文件分享-勞保、健保、勞退三合一表單</a></li><li><a href="/post/2013/4point-doc-new-born-health-insurance.html" title="[四點設計]文件分享-新生兒健保申請 ">[四點設計]文件分享-新生兒健保申請 </a></li><li><a href="/post/2013/please-join-4point-design.html" title="加入四點設計，開始設計自己的人生">加入四點設計，開始設計自己的人生</a></li><li><a href="/post/2013/blog-test.html" title="blog test">blog test</a></li><li><a href="/post/2013/just-go.html" title="just go">just go</a></li><li><a href="/post/2013/hello-world.html" title="Hello, world">Hello, world</a></li></ul></div></article></section><section><article><div class="inner text_post"><h2>Archives</h2><ul><li><a href="/post/2013/" title="2013">2013</a></li></ul></div></article></section><div class="footer_right"><p>Powered by <a href="https://github.com/pct/4press" target="_blank">4press</a></p></div></div><!--<End>Main </End>--><aside><div class="social"><h4>Social Links</h4><ul class="no-svg"><li><a href="https://twitter.com/daniel_freebsd" target="_blank" class="fc-webicon twitter"></a></li><li><a href="http://about.me/linpct" target="_blank" class="fc-webicon aboutme"></a></li><li><a href="https://facebook.com/freebsd.py" target="_blank" class="fc-webicon facebook"></a></li><li><a href="https://github.com/pct" target="_blank" class="fc-webicon github"></a></li><li><a href="/rss.xml" class="fc-webicon rss"></a></li></ul><p class="clear"></p></div><div class="about"><h4>About me</h4><img src="/images/avatar.jpg" title="Daniel Lin"><p> </p><p>Daniel Lin, 網路暱稱 pct</p><p>專注在什麼都學，所以什麼都不專精</p><p>如果真要立個目標，那就是：<b>「為天地立心 為生民立命 為往聖繼絕學 為萬世開太平」</b></p><p>人生苦短，還想學的有：<b>中醫、武術</b>以及如何賺錢；趕快教我吧，拜託！</p><p> </p><h4>Work</h4><p> <b>A Web/App Developer</b></p><ul><li>php</li><li>python</li><li>ruby</li><li>javascript, coffeescript</li></ul><p>work for <b><a href="http://4point-inc.com" target="_blank">四點設計</a></b></p><p></p></div></aside><!--<End>Aside</End>--></div><!--<End>Container</End>--><script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script><script src="http://static.tumblr.com/20pvjfl/e2Fla34af/html5.js"></script><script type="text/javascript">var _gaq = _gaq || [];
   _gaq.push(['_setAccount', 'UA-38544080-1']);
   _gaq.push(['_trackPageview']);
   (function() {
