@@ -3,7 +3,7 @@
 
 對啦，會遇到這種事真的很奇怪，按下 renew 是沒有反應的，會出現 這樣的 alert：
 
-`No value was provided for the parameter certificateIds`
+    No value was provided for the parameter certificateIds
 
 ![](http://mind.deep.tw/images/foo/renew_fail.png)
 

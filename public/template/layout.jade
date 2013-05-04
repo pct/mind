@@ -1,58 +1,61 @@
 !!!
-html
+html(lang="zh-TW")
   head
     include includes/head
-    block stylesheet
   body
-    .container
-      header
-        .logo
-          h1
-            a(href='/') #{site.name}
-          
+    #fb-root
+    script
+        (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
+        fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
+    .navbar.navbar-inverse.navbar-fixed-top
+      .navbar-inner
+        .container-fluid
+          button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          a.brand(href='/') #{site.name}
+          .nav-collapse.collapse
+            ul.nav
+              include includes/nav
+    
+    .container-fluid.main-container
+      .row-fluid
+        .span9
           h2 #{site.description}
+          hr
+          
+          .row-fluid
+            section
+              block content
+            section
+              block article
+            section
+              block archive
+                
+          //
+             End Main 
 
-        //
-           End logo 
-      //
-         End Header 
-
-      .main
-        section
-          block content
-        section
-          block article
-        section
-          block archive
-            
-        .footer_right
-          p Powered by 
-            a(href="https://github.com/pct/4press", target="_blank") 4press
-      //
-         End Main 
-
-      aside
-        .social
-          include includes/social
-        .about
-          include includes/about
-          include includes/work
-      //
-         End Aside
+        .span3
+          .well.sidebar-nav
+            .about
+              include includes/about
+              include includes/work
+          .plurk
+            include includes/plurk
         
-    //
-      End Container
+      .footer_right
+        p Powered by 
+          a(href="https://github.com/pct/4press", target="_blank") 4press
+          | , Theme by 
+          a(href="http://bootswatch.com/cosmo/", target="_blank") Bootswatch Cosmo
 
     include includes/script
     include includes/ga
     block script
-
-
-
-
-
-
-
-
-
-

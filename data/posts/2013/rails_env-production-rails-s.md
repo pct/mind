@@ -1,4 +1,4 @@
-RAILS_ENV=production rails s
+RAILS_ENV 在 production 時的 rails s
 ======
 
 ##情境

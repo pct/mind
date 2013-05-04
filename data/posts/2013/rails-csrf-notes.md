@@ -17,8 +17,10 @@ rails 3.2.13
 BUT，這人生中最常出現的 BUT，會告訴你：
 
 	Completed 201 Created in 50ms (Views: 4.6ms | ActiveRecord: 1.6ms)
+
+驚！！！
 	
-`也就是你以為 rails 幫你擋下 CSRF，結果根本還是被寫入了`
+	也就是你以為 rails 幫你擋下 CSRF，結果根本還是被寫入了
 
 ### 為什麼？
 
@@ -30,7 +32,10 @@ BUT，這人生中最常出現的 BUT，會告訴你：
 
 白話翻譯：
 
-1. rails 的 CSRF 保護機制幫你判斷了非 GET 的操作但又沒提供 token，所以跟你說了：`WARNING: Can't verify CSRF token authenticity`
+1. rails 的 CSRF 保護機制幫你判斷了非 GET 的操作但又沒提供 token，所以跟你說了：
+
+		WARNING: Can't verify CSRF token authenticity
+	
 
 2. rails 在沒有「登入」的狀況下，也沒幫你阻止，因為他預設的 `handle_unverified_request` 就只幫你做了 `reset_session`
 

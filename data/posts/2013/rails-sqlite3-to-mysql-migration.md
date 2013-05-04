@@ -7,33 +7,31 @@ rails sqlite3 to mysql migration
 ## 步驟
 1. 修改 `Gemfile`，加入：
 
-	`gem 'mysql2'`
-
-	`gem 'yaml_db'`
+		gem 'mysql2'
+		gem 'yaml_db'
 	
 2. bundle 一下，安裝剛剛那兩個 gem：
 
-	`$ bundle`
+		$ bundle
 	
 3. 備份一下你的 db 設定檔
 
-	`$ cp config/database.yml config/database.yml.sqlite3`
+		$ cp config/database.yml config/database.yml.sqlite3
 
 4. 把 DB 資料 dump 出來
 
-	`$ rake db:dump`
+		$ rake db:dump
 	
 5. 改一下 `config/database.yml`，把 `sqlite3` 換成 `mysql2`
 
 6. 到 mysql 建資料庫
 
-	`rake db:setup`
-	
-	`rake db:schema:load`
+		rake db:setup
+		rake db:schema:load
 	
 7. 把剛剛 `db:dump` 結果再 `load` 回去
 
-	`rake db:load`
+		rake db:load
 
 
 ## 參考資料 

@@ -8,16 +8,7 @@ append content
       footer
         .date #{entry.time}
 
-  article
-    .inner.text_post.markdown
-      script
-        var idcomments_acct = '65fe65a01b64947811375a69814dd3d4';
-        var idcomments_post_id;
-        var idcomments_post_url;
-      span#IDCommentsPostTitle(style='display: none;')
-      script(type='text/javascript', src='http://www.intensedebate.com/js/genericCommentWrapperV2.js')
- 
-
+    .fb-comments(data-href="#{site.siteUrl}/#{entry.url}", data-num-posts="10")
 
 append script
   script(src="/public/google-code-prettify/prettify.js")

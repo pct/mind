@@ -51,7 +51,7 @@
 
 > 公司對面就是光華商場。 <del>買電腦書、買 3C、逛金鍵盤有夠方便</del>
 
-<iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.tw/maps/ms?msa=0&amp;msid=214503238037408218491.0004d64893a6a47757fc8&amp;brcurrent=3,0x3442a99bd1adbcc7:0xc5ab69bb7491162a,0,0x3442ac6b61dbbd9d:0xc0c243da98cba64b&amp;ie=UTF8&amp;t=m&amp;ll=25.042526,121.53132&amp;spn=0.003402,0.00456&amp;z=17&amp;output=embed"></iframe>
+<iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.tw/maps/ms?msa=0&amp;msid=214503238037408218491.0004d64893a6a47757fc8&amp;brcurrent=3,0x3442a99bd1adbcc7:0xc5ab69bb7491162a,0,0x3442ac6b61dbbd9d:0xc0c243da98cba64b&amp;ie=UTF8&amp;t=m&amp;ll=25.042526,121.53132&amp;spn=0.003402,0.00456&amp;z=17&amp;output=embed"></iframe>
 
 [在較大的地圖上查看四點設計位置](https://maps.google.com.tw/maps/ms?msa=0&amp;msid=214503238037408218491.0004d64893a6a47757fc8&amp;brcurrent=3,0x3442a99bd1adbcc7:0xc5ab69bb7491162a,0,0x3442ac6b61dbbd9d:0xc0c243da98cba64b&amp;ie=UTF8&amp;t=m&amp;ll=25.042526,121.53132&amp;spn=0.003402,0.00456&amp;z=17&amp;source=embed)
 

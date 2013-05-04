@@ -4,13 +4,14 @@ append content
   - if (items.length)
     - items.forEach(function(item) {
       article
-        .inner.text_post.markdown
+        .p
           | !{item.content}
         .footerwrap
           footer
-            .date #{item.time}
+            .date Date: #{item.time}
             .link
               a(href="#{item.url}") comments
+      hr
     - })
 
 append article
@@ -34,3 +35,14 @@ append archive
             li
               a(href="#{item.url}", title="#{item.title}") #{item.title}
           - })
+
+append script
+  script(src="/public/google-code-prettify/prettify.js")
+  script
+    (function() {
+      var pres = document.getElementsByTagName('pre');
+      for (var i=0,l=pres.length; i<l; i++) {
+        pres[i].className = 'prettyprint';
+      }
+      prettyPrint();
+    })();
