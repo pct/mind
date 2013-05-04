@@ -25,3 +25,8 @@ article .footerwrap {
 .fb-comments, .fb-comments span[style], .fb-comments iframe[style] {
   width: 100% !important;
 }
+
+pre.prettyprint {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  padding-left: 10px;
+}
