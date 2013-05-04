@@ -5,7 +5,9 @@ append content
     - items.forEach(function(item) {
       article
         .p
-          | !{item.content}
+          h1
+            a(href="#{item.url}") # #{item.title}
+          | !{(item.content).replace('<h1>' + item.title + '</h1>', "")}
         .footerwrap
           footer
             .date Date: #{item.time}
