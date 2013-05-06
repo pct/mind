@@ -13,12 +13,8 @@ article .footerwrap {
   text-align: center;
 }
 
-.row-fluid h1 {
+.row h1 {
   color: #007FFF;
-}
-
-.main-container {
-  margin-top: 50px;
 }
 
 /* FIX facebook comments */
@@ -29,4 +25,11 @@ article .footerwrap {
 pre.prettyprint {
   border: 1px solid rgba(0, 0, 0, 0.15);
   padding-left: 10px;
+}
+
+
+@media (min-width: 979px) {
+  .main-container {
+    margin-top: 50px;
+  }
 }

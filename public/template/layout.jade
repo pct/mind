@@ -15,7 +15,7 @@ html(lang="zh-TW")
 
     .navbar.navbar-inverse.navbar-fixed-top
       .navbar-inner
-        .container-fluid
+        .container
           button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
             span.icon-bar
             span.icon-bar
@@ -25,13 +25,13 @@ html(lang="zh-TW")
             ul.nav
               include includes/nav
     
-    .container-fluid.main-container
-      .row-fluid
-        .span8
+    .container.main-container
+      .row
+        .span9
           h2 #{site.description}
           hr
           
-          .row-fluid
+          .row
             section
               block content
           //
@@ -49,7 +49,7 @@ html(lang="zh-TW")
           .plurk
             include includes/plurk
         
-      .footer_right
+      .footer_right.row
         p Powered by 
           a(href="https://github.com/pct/4press", target="_blank") 4press
           | , Theme by 
