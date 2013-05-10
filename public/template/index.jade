@@ -4,6 +4,7 @@ append content
   - if (items.length)
     - items.forEach(function(item) {
       article
+        .fb-like(data-href="#{site.siteUrl}#{item.url}", data-send='false', data-layout='button_count', data-width='450', data-show-faces='false', style="float:right;")
         .p
           h1
             a(href="#{item.url}") # #{item.title}

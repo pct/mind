@@ -2,6 +2,7 @@ extends layout
 
 append content
   article
+    .fb-like(data-href="#{site.siteUrl}#{entry.url}", data-send='false', data-layout='button_count', data-width='450', data-show-faces='false', style="float:right;")
     .inner.text_post.markdown
       | !{entry.content}
     .footerwrap
