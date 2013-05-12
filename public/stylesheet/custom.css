@@ -1,3 +1,5 @@
+@import url('//fonts.googleapis.com/css?family=Quando:400italic,700italic,400,700');
+
 h1 {
   line-height: 1em;
 }
@@ -15,6 +17,10 @@ article .footerwrap {
 
 .row h1 {
   color: #007FFF;
+}
+
+h2.site_subtitle {
+  font-family: "Quando", "Open Sans", Calibri, Candara, Arial, sans-serif;
 }
 
 /* FIX facebook comments */

@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sun, 12 May 2013 00:07:14 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[freebsd service command]]></title><description><![CDATA[<h1>freebsd service command</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sun, 12 May 2013 00:46:07 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[FreeBSD mysql server charset utf8]]></title><description><![CDATA[<h1>FreeBSD mysql server charset utf8</h1>
+<h3>緣起</h3>
+<p>最近在更新某版本 mysql-server 的時候，發現編碼不對。那個 latin1 又出現了！</p>
+<p>但我明明在 ports.conf 有加上</p>
+<pre><code>WITH_CHARSET=utf8
+WITH_COLLATION=utf8_general_ci</code></pre>
+<p>不過編譯還是無效。</p>
+<h3>發現</h3>
+<p>Google 後發現 <a href="http://bbs.chinaunix.net/thread-3853083-1-1.html">這篇</a>，上面就說某版本的 mysql-server 自從改用 cmake 來編譯後，已無那些選項。所以重編再多次，或是 make 時使用 <code>-DWITH_CHARSET=utf8</code> 這種，是無效的。</p>
+<h3>解決</h3>
+<p>雖然對岸作者 send-pr 不過沒有被該 port 的 maintainer 接受，所以就要在 server 改 Makefile</p>
+<p>因為只是自己用，所以兩行就夠了：</p>
+<pre><code>-DDEFAULT_CHARSET=utf8 \
+-DDEFAULT_COLLATION=utf8_general_ci</code></pre>
+<h3>my.cnf?</h3>
+<p>明明就如 maintainer 說的，只要修改 my.cnf 就好了，不是嗎？</p>
+<p>但，聽說 <b>要在產生 /var/db/mysql 前要先設定好 my.cnf</b> 才行，如果真是這樣，那對我而言，這不是解決方案而是撞壁方案了…</p>
+<h3>結尾</h3>
+<p>這種小事還要 Google, 我也真是技不如人啊 Orz...</p>
+]]></description><link>/post/2013/freebsd-mysql-server-charset-utf8.html</link><guid isPermaLink="true">/post/2013/freebsd-mysql-server-charset-utf8.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Sun, 12 May 2013 00:12:16 GMT</pubDate></item><item><title><![CDATA[freebsd service command]]></title><description><![CDATA[<h1>freebsd service command</h1>
 <p>今天一直重新編譯 mysql-server 看 mysql 編碼問題, 所以一直在 /usr/local/etc/rc.d/mysql-server restart</p>
 <p>然後靈光一閃就想說，FreeBSD 應該會有對應於很多 Linux distro 都有的 <code>service</code> command 才對。</p>
 <p>果不其然，查了一下，果然有！</p>
