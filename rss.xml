@@ -1,5 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sat, 04 May 2013 15:22:24 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails carrierwave image format error]]></title><description><![CDATA[<h1>rails carrierwave image format error</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sun, 12 May 2013 00:07:14 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[freebsd service command]]></title><description><![CDATA[<h1>freebsd service command</h1>
+<p>今天一直重新編譯 mysql-server 看 mysql 編碼問題, 所以一直在 /usr/local/etc/rc.d/mysql-server restart</p>
+<p>然後靈光一閃就想說，FreeBSD 應該會有對應於很多 Linux distro 都有的 <code>service</code> command 才對。</p>
+<p>果不其然，查了一下，果然有！</p>
+<p>下 <code>service</code> 後，出現：</p>
+<pre><code>Usage:
+service -e
+service [-v] -l | -r
+service [-v] &lt;rc.d script&gt; start|stop|etc.
+service -h
+
+-e    Show services that are enabled
+-l    List all scripts in /etc/rc.d and /usr/local/etc/rc.d
+-r    Show the results of boot time rcorder
+-v    Verbose</code></pre>
+<p>也就是之後就可以 <code>service mysql-server restart</code> 就好啦。</p>
+<p>網友 @Nephom 說「相信我，用完整路徑會比較好....因為....有些command會沒寫好」。我是相信的，因為很久以前我也遇過 cd /usr/local/etc/rc.d; ./apache2x start 但是卻 start 不起來的情況，但使用 /usr/local/etc/rc.d/apache2x start 卻又正常 :P </p>
+]]></description><link>/post/2013/freebsd-service-command.html</link><guid isPermaLink="true">/post/2013/freebsd-service-command.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Sat, 11 May 2013 23:56:12 GMT</pubDate></item><item><title><![CDATA[rails carrierwave image format error]]></title><description><![CDATA[<h1>rails carrierwave image format error</h1>
 <h3>緣起</h3>
 <p>在使用 carrierwave 時，在 Mac 沒問題，但在 production server 上傳圖片(.png)就失敗，而且錯誤訊息是：</p>
 <pre><code>No decode delegate for this image format.</code></pre>
@@ -111,7 +128,7 @@
 </ol>
 <h2>結語</h2>
 <p><del>不免俗又是廢文一篇，其實 google 就會幫你找到解答了，對吧？</del></p>
-]]></description><link>/post/2013/rails-sqlite3-to-mysql-migration.html</link><guid isPermaLink="true">/post/2013/rails-sqlite3-to-mysql-migration.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Wed, 13 Mar 2013 04:44:06 GMT</pubDate></item><item><title><![CDATA["No value was provided for the parameter certificateIds"]]></title><description><![CDATA[<h1>&quot;No value was provided for the parameter certificateIds&quot;</h1>
+]]></description><link>/post/2013/rails-sqlite3-to-mysql-migration.html</link><guid isPermaLink="true">/post/2013/rails-sqlite3-to-mysql-migration.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Wed, 13 Mar 2013 04:44:06 GMT</pubDate></item><item><title><![CDATA[No value was provided for the parameter certificateIds]]></title><description><![CDATA[<h1>No value was provided for the parameter certificateIds</h1>
 <p>對啦，會遇到這種事真的很奇怪，按下 renew 是沒有反應的，會出現 這樣的 alert：</p>
 <pre><code>No value was provided for the parameter certificateIds</code></pre>
 <p><img src="http://mind.deep.tw/images/foo/renew_fail.png" alt=""></p>
