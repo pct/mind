@@ -1,0 +1,43 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>Mind - FreeBSD binary update</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="keyword" content="pct, blog, Daniel Lin, 4press,FreeBSD binary update"><meta name="description" content="FreeBSD binary update"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/x-icon" href="http://mind.deep.tw/favicon.ico"><link rel="alternate" type="application/rss+xml" title="Mind &raquo; Feed" href="http://mind.deep.tw/rss.xml"><link href="/public/stylesheet/cosmo.css" rel="stylesheet"><link href="/public/google-code-prettify/prettify.css" rel="stylesheet"><link href="/public/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"><link href="/public/stylesheet/custom.css" rel="stylesheet"><!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><![endif]--></head><body><div id="fb-root"></div><script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script><div class="navbar navbar-inverse navbar-fixed-top"><div class="navbar-inner"><div class="container"><button type="button" data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="brand">Mind</a><div class="nav-collapse collapse"><ul class="nav"><li class="active"><a href="/">Home</a></li><li><a href="mailto:linpct@gmail.com">Mail</a></li><li><a href="https://github.com/pct" target="_blank">Github</a></li><li><a href="http://plurk.com/pct" target="_blank">Plurk</a></li><li><a href="https://twitter.com/daniel_freebsd" target="_blank">Twitter</a></li><li><a href="https://facebook.com/freebsd.py" target="_blank">Facebook</a></li><li><a href="https://github.com/pct" target="_blank"> </a></li></ul></div></div></div></div><div class="container main-container"><div class="row"><div class="span9"><h2 class="site_subtitle">read the world, read my soul</h2><hr><div class="row"><section><article><div data-href="http://mind.deep.tw/post/2013/freebsd-binary-update.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" style="float:right;" class="fb-like"></div><div class="inner text_post markdown"><h1>FreeBSD binary update</h1>
+<h3>緣起</h3>
+<p>其實這篇是要講 <code>freebsd-update</code> 這個 command</p>
+<p>因為沒看什麼文件，所以以下都是胡亂猜測，如果不小心害到人，就只能先說對不起。(當然歡迎大家指正)</p>
+<p><del>謎之聲：這樣的文件你也敢丟出來害人</del></p>
+<h3>怎麼用</h3>
+<p>同 RELEASE 版本的更新：</p>
+<pre><code># freebsd-update fetch
+# freebsd-update install
+# mergemaster -U
+# portmaster -afvG (我是用破大師進行 package 更新，可以改成 portupgrade -avf)
+# reboot</code></pre>
+<p>跨 RELEASE 版本的更新：</p>
+<pre><code># freebsd-update upgrade -r 9.1-RELEASE
+# freebsd-update install
+# portmaster -afvG (我是用破大師進行 package 更新，可以改成 portupgrade -avf)
+# reboot
+# freebsd-update install
+# mergemaster -U
+# reboot</code></pre>
+<h3>參考資料</h3>
+<p><a href="http://www.freebsd.org/doc/zh_CN/books/handbook/updating-upgrading-freebsdupdate.html">更新与升级 FreeBSD</a></p>
+</div><div class="footerwrap"><footer><div class="date">2013-05-14 06:25:44</div></footer></div><div data-href="http://mind.deep.tw/post/2013/freebsd-binary-update.html" data-num-posts="10" class="fb-comments"></div></article></section></div><!--<End>Main </End>--></div><div class="span3"><div class="well sidebar-nav"><div class="about"><h2>About me</h2><img src="/images/avatar.jpg" title="Daniel Lin"><p> </p><p>Daniel Lin, 網路暱稱 pct</p><p>專注在什麼都學，所以什麼都不專精</p><p>如果真要立個目標，那就是：<b>「為天地立心 為生民立命 為往聖繼絕學 為萬世開太平」</b></p><p>人生苦短，還想學的有：<b>中醫、武術</b>以及如何賺錢；趕快教我吧，拜託！</p><p> </p><h2>Work</h2><p> <b>A Web/App Developer</b></p><ul><li>php (slim, FuelPHP, myself)</li><li>python (django, pylons)</li><li>ruby (rails, sinatra)</li><li>javascript, coffeescript</li><li>iOS/Android App with Titanium Alloy</li></ul><p>work for <b><a href="http://4point-inc.com" target="_blank">四點設計</a></b></p><p></p></div><div class="articles"></div><div class="archive"></div></div><div class="plurk"><iframe src="http://www.plurk.com/getWidget?uid=3127252&amp;u_info=2&amp;bg=eeeeee&amp;tl=eeeeee" width="100%" frameborder="0" height="375" scrolling="no"></iframe></div></div></div><div class="footer_right row"><p>Powered by <a href="https://github.com/pct/4press" target="_blank">4press</a>, Themed by <a href="http://bootswatch.com/cosmo/" target="_blank">Bootswatch Cosmo</a></p></div></div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script src="/public/bootstrap/js/bootstrap.min.js"></script><script type="text/javascript">var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38544080-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script><script src="/public/google-code-prettify/prettify.js"></script><script>(function() {
+  var pres = document.getElementsByTagName('pre');
+  for (var i=0,l=pres.length; i<l; i++) {
+    pres[i].className = 'prettyprint';
+  }
+  prettyPrint();
+})();</script></body></html>

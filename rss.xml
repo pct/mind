@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sun, 12 May 2013 00:46:07 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[FreeBSD mysql server charset utf8]]></title><description><![CDATA[<h1>FreeBSD mysql server charset utf8</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Tue, 14 May 2013 10:43:12 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[FreeBSD binary update]]></title><description><![CDATA[<h1>FreeBSD binary update</h1>
+<h3>緣起</h3>
+<p>其實這篇是要講 <code>freebsd-update</code> 這個 command</p>
+<p>因為沒看什麼文件，所以以下都是胡亂猜測，如果不小心害到人，就只能先說對不起。(當然歡迎大家指正)</p>
+<p><del>謎之聲：這樣的文件你也敢丟出來害人</del></p>
+<h3>怎麼用</h3>
+<p>同 RELEASE 版本的更新：</p>
+<pre><code># freebsd-update fetch
+# freebsd-update install
+# mergemaster -U
+# portmaster -afvG (我是用破大師進行 package 更新，可以改成 portupgrade -avf)
+# reboot</code></pre>
+<p>跨 RELEASE 版本的更新：</p>
+<pre><code># freebsd-update upgrade -r 9.1-RELEASE
+# freebsd-update install
+# portmaster -afvG (我是用破大師進行 package 更新，可以改成 portupgrade -avf)
+# reboot
+# freebsd-update install
+# mergemaster -U
+# reboot</code></pre>
+<h3>參考資料</h3>
+<p><a href="http://www.freebsd.org/doc/zh_CN/books/handbook/updating-upgrading-freebsdupdate.html">更新与升级 FreeBSD</a></p>
+]]></description><link>/post/2013/freebsd-binary-update.html</link><guid isPermaLink="true">/post/2013/freebsd-binary-update.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Mon, 13 May 2013 22:25:44 GMT</pubDate></item><item><title><![CDATA[FreeBSD mysql server charset utf8]]></title><description><![CDATA[<h1>FreeBSD mysql server charset utf8</h1>
 <h3>緣起</h3>
 <p>最近在更新某版本 mysql-server 的時候，發現編碼不對。那個 latin1 又出現了！</p>
 <p>但我明明在 ports.conf 有加上</p>
