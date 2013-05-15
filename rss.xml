@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 15 May 2013 06:39:09 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails model namespace notes]]></title><description><![CDATA[<h1>rails model namespace notes</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 15 May 2013 09:14:12 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails 406 and 422 error]]></title><description><![CDATA[<h1>rails 406 and 422 error</h1>
+<h3>緣起</h3>
+<p>身為 rails 新手，常碰壁也是應該的</p>
+<p>這是在處理前後端 route 不一致，且要客製前端 url + ajax post 時不小心撞的壁</p>
+<p><del>而且撞壁還要亂寫記錄來害別人</del>，實在不可取。所以請不小心路過的大大們幫忙指正，謝謝！</p>
+<h3>HTTP 406 Not Acceptable?</h3>
+<p>會遇到這情形，是因為不管是 form_for 或 simple_form_for 如果沒有指定 json 格式的回傳，就會採用 html 回傳。</p>
+<p>但是偏偏你已經拔除 render html 的相關 function，所以就報錯了。</p>
+<p>因此，在 form_for 或 simple_form_for 指定 :url 到 json url 就好了</p>
+<h3>422 Unprocessable Entity Error?</h3>
+<p>你已經 pass 了上述 406 那關，但是你又看到了 422 error，why？</p>
+<p>先檢查一下你 post form 時，有無漏掉欄位、或是格式不對沒有被 server 驗證通過。</p>
+<p>只要格式符合，應該就會正常 pass 了 :)</p>
+<h3>結語</h3>
+<p>Web 技術學不完，繼續加油。</p>
+]]></description><link>/post/2013/rails-406-and-422-error.html</link><guid isPermaLink="true">/post/2013/rails-406-and-422-error.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Tue, 14 May 2013 20:37:04 GMT</pubDate></item><item><title><![CDATA[rails model namespace notes]]></title><description><![CDATA[<h1>rails model namespace notes</h1>
 <h3>緣起</h3>
 <p>有時候做後台，使用 rails g scaffold 是可以很快速的，但，在前後台切分的架構，有時候也不是把後台的程式部分搬過來就可以滿足一切需求</p>
 <h3>Error log?</h3>
