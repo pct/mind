@@ -1,5 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Tue, 14 May 2013 10:43:12 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[FreeBSD binary update]]></title><description><![CDATA[<h1>FreeBSD binary update</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 15 May 2013 06:39:09 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails model namespace notes]]></title><description><![CDATA[<h1>rails model namespace notes</h1>
+<h3>緣起</h3>
+<p>有時候做後台，使用 rails g scaffold 是可以很快速的，但，在前後台切分的架構，有時候也不是把後台的程式部分搬過來就可以滿足一切需求</p>
+<h3>Error log?</h3>
+<pre><code>找不到 &quot;books&quot; 這個 table (看範例會知道這 table 不存在，存在的是 member_books)</code></pre>
+<h3>範例</h3>
+<p>後台：</p>
+<pre><code>$ rails g scaffold member/books title:string</code></pre>
+<p>然後你想說就把產生的 member/books model copy 一份到前台，在來進行調整 &lt;-- 這當然沒問題。</p>
+<p>問題在於，有無 copy 完整。</p>
+<p>今天遇到的初學者的錯誤就是沒 copy 完整，所以漏了 copy model/member.rb，這個檔案內容是：</p>
+<pre><code>module Member
+    def self.table_name_prefix
+        &#39;member_&#39;
+    end
+end</code></pre>
+<p>有了幫你設定 table name prefix 的檔案後，問題自然就迎刃而解了。</p>
+<h3>參考資料</h3>
+<p><a href="http://stackoverflow.com/questions/5852626/handling-namespace-models-classes-in-namespace">Handling namespace models (classes) in namespace</a></p>
+<h3>結語</h3>
+<p>經驗是靠撞壁出來的 &lt;-- 我是說我自己</p>
+]]></description><link>/post/2013/rails-model-namespace-notes.html</link><guid isPermaLink="true">/post/2013/rails-model-namespace-notes.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Tue, 14 May 2013 18:26:31 GMT</pubDate></item><item><title><![CDATA[upgrade rails4 beta1 to rc1]]></title><description><![CDATA[<h1>upgrade rails4 beta1 to rc1</h1>
+<h3>緣起</h3>
+<p>這還要什麼緣起？就是 rc1 出現所以就要升級到 rc1 啦</p>
+<p>那還要寫這篇幹嘛？因為單純修改 Gemfile 後，rails s 會再起不能，所以記錄一下步驟。</p>
+<h3>錯誤訊息</h3>
+<pre><code>gems/railties-4.0.0.rc1/lib/rails/application/configuration.rb:144:in `const_get&#39;: uninitialized constant ActionDispatch::Session::EncryptedCookieStore (NameError)</code></pre>
+<h3>How?</h3>
+<ol>
+<li><p>把 Gemfile 裡面的 rails 相關 gem，由 4.0.0.beta1 全部改為 4.0.0.rc1</p>
+</li>
+<li><p>把 config/initializers/session_store.rb 中的</p>
+<pre><code> :encrypted_cookie_store</code></pre>
+<p> 換成</p>
+<pre><code> :cookie_store</code></pre>
+</li>
+<li><p>重新 rails s 吧</p>
+</li>
+</ol>
+<h3>結語</h3>
+<p>還沒學會爬就想要飛，碰壁是應該的</p>
+<h3>參考資料</h3>
+<p><a href="http://qiita.com/items/6e19c246d608abd9795b">rails4.0.0.beta1 -&gt; rails4.0.0.rc1 migration guide</a></p>
+]]></description><link>/post/2013/upgrade-rails4-beta1-to-rc1.html</link><guid isPermaLink="true">/post/2013/upgrade-rails4-beta1-to-rc1.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Tue, 14 May 2013 18:16:43 GMT</pubDate></item><item><title><![CDATA[FreeBSD binary update]]></title><description><![CDATA[<h1>FreeBSD binary update</h1>
 <h3>緣起</h3>
 <p>其實這篇是要講 <code>freebsd-update</code> 這個 command</p>
 <p>因為沒看什麼文件，所以以下都是胡亂猜測，如果不小心害到人，就只能先說對不起。(當然歡迎大家指正)</p>

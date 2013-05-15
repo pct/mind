@@ -85,6 +85,16 @@
             "file": "data/posts/2013/freebsd-binary-update.md",
             "ctime": "2013-05-14 06:25:44",
             "mtime": "2013-05-14 06:25:44"
+        },
+        {
+            "file": "data/posts/2013/upgrade-rails4-beta1-to-rc1.md",
+            "ctime": "2013-05-15 02:16:43",
+            "mtime": "2013-05-15 02:16:43"
+        },
+        {
+            "file": "data/posts/2013/rails-model-namespace-notes.md",
+            "ctime": "2013-05-15 02:26:31",
+            "mtime": "2013-05-15 02:26:31"
         }
     ]
 }
