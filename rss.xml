@@ -1,5 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Thu, 16 May 2013 11:25:45 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Add terms to rails form]]></title><description><![CDATA[<h1>Add terms to rails form</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Thu, 16 May 2013 11:39:39 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Rails custom form label name with auto input focus]]></title><description><![CDATA[<h1>Rails custom form label name with auto input focus</h1>
+<h3>前言</h3>
+<p>這種怪怪的英文描述也只有我寫得出來</p>
+<h3>緣起</h3>
+<p>身為台灣開發者，form label 用中文顯示也是正常。但 rails g scaffold 幫忙 gen 好的 code 就不會讓你點了 label 後就自動 focus 到該 label 指定的 input</p>
+<h3>解法</h3>
+<p>很簡單，這跟 rails form 沒有關係，這是 label for 設定好就好的，所以範例如下，重點在<code>:for =&gt; &#39;&lt;前綴字&gt;_id_num&#39;</code>：</p>
+<pre><code>&lt;div class=&quot;control-group&quot;&gt;
+  &lt;%= f.label &quot;身份證字號/居留證號&quot;, :class =&gt; &#39;control-label&#39;, :for =&gt; &#39;&lt;前綴字&gt;_id_num&#39; %&gt;
+  &lt;div class=&quot;controls&quot;&gt;
+    &lt;%= f.text_field :id_num, :class =&gt; &#39;text_field span3&#39; %&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<h3>結語</h3>
+<p>這麼簡單也要 PO 文？沒錯，假裝一下這 blog 很豐富。</p>
+<p>實際上卻也沒幾個人路過。</p>
+]]></description><link>/post/2013/rails-custom-form-label-name-with-auto-input-focus.html</link><guid isPermaLink="true">/post/2013/rails-custom-form-label-name-with-auto-input-focus.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Wed, 15 May 2013 23:29:09 GMT</pubDate></item><item><title><![CDATA[Add terms to rails form]]></title><description><![CDATA[<h1>Add terms to rails form</h1>
 <h3>前言</h3>
 <p>因為還是嫩咖，所以邊作邊記錄下來，應該不是最佳解，但可以請有路過、看不過的人，幫忙糾正。</p>
 <h3>緣起</h3>
