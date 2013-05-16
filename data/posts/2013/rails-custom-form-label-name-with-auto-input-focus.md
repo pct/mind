@@ -10,12 +10,12 @@ Rails custom form label name with auto input focus
 ###解法
 很簡單，這跟 rails form 沒有關係，這是 label for 設定好就好的，所以範例如下，重點在`:for => '<前綴字>_id_num'`：
 
-	<div class="control-group">
-	  <%= f.label "身份證字號/居留證號", :class => 'control-label', :for => '<前綴字>_id_num' %>
-	  <div class="controls">
-	    <%= f.text_field :id_num, :class => 'text_field span3' %>
-	  </div>
-	</div>
+	<%= f.label "身份證字號/居留證號", :for => '<前綴字>_id_num' %>
+	<%= f.text_field :id_num %>
+
+如果你用的是 simple_form, 就不用考慮太多：
+
+	<%= f.input :id_num, :label => "身份證字號/居留證號" %>
 	
 ###結語
 這麼簡單也要 PO 文？沒錯，假裝一下這 blog 很豐富。
