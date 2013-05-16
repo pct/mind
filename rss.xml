@@ -1,5 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 15 May 2013 09:14:12 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails 406 and 422 error]]></title><description><![CDATA[<h1>rails 406 and 422 error</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Thu, 16 May 2013 11:25:45 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Add terms to rails form]]></title><description><![CDATA[<h1>Add terms to rails form</h1>
+<h3>前言</h3>
+<p>因為還是嫩咖，所以邊作邊記錄下來，應該不是最佳解，但可以請有路過、看不過的人，幫忙糾正。</p>
+<h3>緣起</h3>
+<p>在您平日的操作中，送出表單前，是不是都要勾取「我同意」「我已閱讀且同意...」那些約定呢？</p>
+<h3>How?</h3>
+<p>情況一、原本就有考慮到這些事情，所以早就把 terms 建進資料庫，所以只要在 model 有：</p>
+<pre><code># terms
+attr_accessible :terms
+validates :terms, :presence =&gt; { :message =&gt; &#39;不能為空&#39;}
+validates_numericality_of :terms, :equal_to =&gt; 1,  :message =&gt; &#39;需要同意活動聲明&#39;</code></pre>
+<p>情況二、原本沒考慮，或是 terms 本來就不該是欄位，那也沒關係，只要在 model 加入</p>
+<pre><code># terms
+attr_accessor :terms #就是比上例多這行
+attr_accessible :terms
+validates :terms, :presence =&gt; { :message =&gt; &#39;不能為空&#39;}
+validates_numericality_of :terms, :equal_to =&gt; 1,  :message =&gt; &#39;需要同意活動聲明&#39;</code></pre>
+<p>然後，不管是情況一、二，在 form 裡面加入底下這行，就可以運作了！(不過 controller 當然本來就要 ready 好)</p>
+<pre><code>&lt;%= f.input :terms, as: :boolean, :label =&gt; &quot;我已閱讀並同意遵守...之規定。&quot; %&gt;</code></pre>
+<h3>結語</h3>
+<p>一樣，人太廢所以需要邊學邊作，也需要各位幫忙指正了 :)</p>
+]]></description><link>/post/2013/add-terms-to-rails-form.html</link><guid isPermaLink="true">/post/2013/add-terms-to-rails-form.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Wed, 15 May 2013 22:51:21 GMT</pubDate></item><item><title><![CDATA[rails 406 and 422 error]]></title><description><![CDATA[<h1>rails 406 and 422 error</h1>
 <h3>緣起</h3>
 <p>身為 rails 新手，常碰壁也是應該的</p>
 <p>這是在處理前後端 route 不一致，且要客製前端 url + ajax post 時不小心撞的壁</p>
