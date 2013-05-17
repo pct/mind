@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Fri, 17 May 2013 05:18:00 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[programming in coffeescript notes]]></title><description><![CDATA[<h1>programming in coffeescript notes</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Fri, 17 May 2013 09:51:24 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails flash notice notes]]></title><description><![CDATA[<h1>rails flash notice notes</h1>
+<h3>緣起</h3>
+<p>在寫 rails form 的時候，做個成功、失敗的頁面。</p>
+<h3>How?</h3>
+<h4>Controller</h4>
+<p>在你想要中斷流程，redirect 到 result 頁面時(當然，有 result 這個 action)：</p>
+<pre><code>format.html {
+    redirect_to :action =&gt; &#39;result&#39;
+    flash[:notice] = &#39;要顯示的訊息&#39;
+}</code></pre>
+<h4>View</h4>
+<pre><code>&lt;% if flash[:notice] %&gt;&lt;%= notice %&gt;&lt;% end %&gt;</code></pre>
+<h3>結語</h3>
+<p>是的，小東西也記錄一下 :)</p>
+]]></description><link>/post/2013/rails-flash-notice-notes.html</link><guid isPermaLink="true">/post/2013/rails-flash-notice-notes.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Thu, 16 May 2013 20:40:25 GMT</pubDate></item><item><title><![CDATA[programming in coffeescript notes]]></title><description><![CDATA[<h1>programming in coffeescript notes</h1>
 <h3>緣起</h3>
 <p>那天因為某人要買大師級的參考書，所以也去書局閒晃一下。很幸運地發現這本書，應該可以稍微補足我殘缺的 coffeescript 知識，當然荷包就失血了。</p>
 <p>書名：<a href="http://www.amazon.com/Programming-CoffeeScript-Developers-Library-Bates/dp/032182010X">Programming in CoffeeScript (Developer&#39;s Library)</a></p>

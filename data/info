@@ -115,6 +115,11 @@
             "file": "data/posts/2013/programming-in-coffeescript-notes.md",
             "ctime": "2013-05-17 07:11:36",
             "mtime": "2013-05-17 07:11:36"
+        },
+        {
+            "file": "data/posts/2013/rails-flash-notice-notes.md",
+            "ctime": "2013-05-17 04:40:25",
+            "mtime": "2013-05-17 04:40:25"
         }
     ]
 }
