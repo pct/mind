@@ -1,5 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Fri, 17 May 2013 09:51:24 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails flash notice notes]]></title><description><![CDATA[<h1>rails flash notice notes</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Fri, 17 May 2013 10:06:54 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails carrierwave image_tag tips]]></title><description><![CDATA[<h1>rails carrierwave image_tag tips</h1>
+<h3>緣起</h3>
+<p>因為連抄都抄錯，所以才要筆記一下。</p>
+<p>Carrierwave 的 gem <a href="https://github.com/carrierwaveuploader/carrierwave">在這裡</a>。</p>
+<h3>簡易有無圖片的判斷</h3>
+<p>有時候圖片上傳並非必要，所以後端要 show 照片時，範例寫著：</p>
+<pre><code>&lt;%= image_tag(@user.avatar_url) if @user.avatar? %&gt;</code></pre>
+<p>亦即，我忘記 if @user.avatar? 後面的 <code>?</code></p>
+<p>忘記加 <code>?</code> 會發生什麼事？就是如果沒那張圖，那麼 rails 在 render 該 view 時就會報錯：500 Internal Server Error</p>
+<h3>結語</h3>
+<p>用 rails 當然要懂一下 ruby，要不一定會有些細節容易出包的 Orz...</p>
+]]></description><link>/post/2013/rails-carrierwave-image_tag-tips.html</link><guid isPermaLink="true">/post/2013/rails-carrierwave-image_tag-tips.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Thu, 16 May 2013 21:55:45 GMT</pubDate></item><item><title><![CDATA[rails flash notice notes]]></title><description><![CDATA[<h1>rails flash notice notes</h1>
 <h3>緣起</h3>
 <p>在寫 rails form 的時候，做個成功、失敗的頁面。</p>
 <h3>How?</h3>
