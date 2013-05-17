@@ -52,11 +52,13 @@ programming in coffeescript notes
 		
 然後在 console 分別執行 `cake` 與 `cake hello`, `cake -n pct hello` 看結果
 
-###其他章節(待續)
 ####Jasmine
-####Node.js
+書中提到的是 ruby gem, 不過我找到 [jasmine-node](https://github.com/mhevery/jasmine-node)，所以直接 
+
+	npm install -g jasmine-node
 
 ###結語
 這本書快看完了，可以準備送給大家了 :D
 
-(明明這 blog 就沒人看，哪來大家)
+###後記
+這本書已經被 Williams 預定了 :)

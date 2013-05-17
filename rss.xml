@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Thu, 16 May 2013 23:59:00 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[programming in coffeescript notes]]></title><description><![CDATA[<h1>programming in coffeescript notes</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Fri, 17 May 2013 05:18:00 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[programming in coffeescript notes]]></title><description><![CDATA[<h1>programming in coffeescript notes</h1>
 <h3>緣起</h3>
 <p>那天因為某人要買大師級的參考書，所以也去書局閒晃一下。很幸運地發現這本書，應該可以稍微補足我殘缺的 coffeescript 知識，當然荷包就失血了。</p>
 <p>書名：<a href="http://www.amazon.com/Programming-CoffeeScript-Developers-Library-Bates/dp/032182010X">Programming in CoffeeScript (Developer&#39;s Library)</a></p>
@@ -34,12 +34,13 @@ task &quot;hello&quot;, &quot;Say hello to someone or say Hello, World&quot;, (o
     else
         console.log &quot;Hello, World&quot;</code></pre>
 <p>然後在 console 分別執行 <code>cake</code> 與 <code>cake hello</code>, <code>cake -n pct hello</code> 看結果</p>
-<h3>其他章節(待續)</h3>
 <h4>Jasmine</h4>
-<h4>Node.js</h4>
+<p>書中提到的是 ruby gem, 不過我找到 <a href="https://github.com/mhevery/jasmine-node">jasmine-node</a>，所以直接 </p>
+<pre><code>npm install -g jasmine-node</code></pre>
 <h3>結語</h3>
 <p>這本書快看完了，可以準備送給大家了 :D</p>
-<p>(明明這 blog 就沒人看，哪來大家)</p>
+<h3>後記</h3>
+<p>這本書已經被 Williams 預定了 :)</p>
 ]]></description><link>/post/2013/programming-in-coffeescript-notes.html</link><guid isPermaLink="true">/post/2013/programming-in-coffeescript-notes.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Thu, 16 May 2013 23:11:36 GMT</pubDate></item><item><title><![CDATA[Rails custom form label name with auto input focus]]></title><description><![CDATA[<h1>Rails custom form label name with auto input focus</h1>
 <h3>前言</h3>
 <p>這種怪怪的英文描述也只有我寫得出來</p>
