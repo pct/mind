@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Fri, 17 May 2013 10:06:54 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails carrierwave image_tag tips]]></title><description><![CDATA[<h1>rails carrierwave image_tag tips</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sat, 18 May 2013 01:13:56 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[the days when I was young]]></title><description><![CDATA[<h1>the days when I was young</h1>
+<p>於是，在這天的清晨，開始反省自己過去那些日子做了什麼事。</p>
+<p>一事無成。</p>
+<p>小時候因為…所以從此之後沒在過什麼節日。這些年來，嘴裡喊著要翻身，卻也沒做出什麼翻身的事情。</p>
+<p>時間就這樣過去，我也就這樣老去；在僅存的日子裡，一樣還是為了年少的短缺，想要翻身，想要跟別人一樣過幸福快樂的日子。</p>
+<p>現在可以在網路上發廢文，其實就代表已經有幸福快樂了 :)</p>
+<p>不管怎樣，我愛我的老婆、女兒，以及家人，家庭和樂就不會有另一個跟我一樣不怎麼過節，每逢過節必傷心的人存在。</p>
+<p>說再多都沒有用，就算這輩子翻不了身，也沒有如同年少時候的幻想(娶有錢的太太，然後我學中醫可以不用擔心生計，免費幫人義診)，還是會去學中醫，還是會繼續想要翻身。</p>
+<p>這就是我的人生。</p>
+<p>在參加過 AWS 面對沒幾個人認識的場子，就會知道世界真大，我還那麼地渺小；別人都上外太空我還在殺豬公(而且我連殺豬刀都沒有)。</p>
+<p>這世界的運行一定還有一種規則我不知道的，我要找出來，想辦法讓自己不能翻身也要扭轉一下。</p>
+<p>加油，逐漸模糊的眼睛及開始萌芽的希望。</p>
+]]></description><link>/post/2013/the-days-when-i-was-young.html</link><guid isPermaLink="true">/post/2013/the-days-when-i-was-young.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Sat, 18 May 2013 00:55:45 GMT</pubDate></item><item><title><![CDATA[rails carrierwave image_tag tips]]></title><description><![CDATA[<h1>rails carrierwave image_tag tips</h1>
 <h3>緣起</h3>
 <p>因為連抄都抄錯，所以才要筆記一下。</p>
 <p>Carrierwave 的 gem <a href="https://github.com/carrierwaveuploader/carrierwave">在這裡</a>。</p>
