@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sat, 18 May 2013 02:23:13 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[the days when I was young]]></title><description><![CDATA[<h1>the days when I was young</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sat, 18 May 2013 13:32:42 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[copy or mv image file to ios retina display scripts]]></title><description><![CDATA[<h1>copy or mv image file to ios retina display scripts</h1>
+<h3>前言</h3>
+<p>瑣碎的事情總是太多。</p>
+<p>廢話不多說，直接切入正題。</p>
+<h3>情境</h3>
+<p>你自己找了一堆圖檔，但是圖檔名稱都沒有 @2x，你需要用 command line 快速複製一份 @2x 或更改檔名</p>
+<h3>script</h3>
+<p>更改檔名：</p>
+<pre><code>$ ls |cut -d &#39;.&#39; -f 1|awk &#39;{print &quot;mv &quot;$1&quot;.png &quot;$1&quot;@2x.png&quot;}&#39;|sh</code></pre>
+<p>複製成 @2x：</p>
+<pre><code>$ ls |cut -d &#39;.&#39; -f 1|awk &#39;{print &quot;cp &quot;$1&quot;.png &quot;$1&quot;@2x.png&quot;}&#39;|sh</code></pre>
+<h3>說實話</h3>
+<p>你沒事要去哪裡找一堆圖檔？</p>
+<p>用 <a href="https://github.com/odyniec/font-awesome-to-png">這個 python script</a> 幫你把所有 fontawesome 的字，轉成你指定大小的圖檔吧。</p>
+<p>(先下載 fontawesome 的字型才有用喔)</p>
+<p>比如你要黑色的圖：</p>
+<pre><code>$ ./font-awesome-to-png.py --color &#39;#111&#39; --size 80 ALL</code></pre>
+<h3>結語</h3>
+<p>就這樣，要不沒事幹嘛改檔名呢？</p>
+]]></description><link>/post/2013/copy-or-mv-image-file-to-ios-retina-display-scripts.html</link><guid isPermaLink="true">/post/2013/copy-or-mv-image-file-to-ios-retina-display-scripts.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Sat, 18 May 2013 01:24:18 GMT</pubDate></item><item><title><![CDATA[the days when I was young]]></title><description><![CDATA[<h1>the days when I was young</h1>
 <p>於是，在這天的清晨，開始反省自己過去那些日子做了什麼事。</p>
 <p>一事無成。</p>
 <p>小時候因為…所以從此之後沒在過什麼節日。這些年來，嘴裡喊著要翻身，卻也沒做出什麼翻身的事情。</p>
