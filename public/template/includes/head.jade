@@ -7,6 +7,18 @@ meta(http-equiv="X-UA-Compatible", content="IE=edge")
 meta(name="keyword", content="#{metaKeywords}")
 meta(name="description", content="#{metaDescription}")
 meta(name="viewport", content="width=device-width, initial-scale=1.0")
+
+if pageName
+  meta(property='og:title', content='#{site.name} - #{pageName}')
+else
+  meta(property='og:title', content='#{site.name}')
+
+meta(property='og:type', content='website')
+meta(property='og:url', content='#{site.siteUrl}')
+meta(property='og:image', content='#{site.siteImage}')
+meta(property='og:site_name', content='#{site.name}')
+meta(property='fb:admins', content='1514263143')
+
 link(rel='icon',type='image/x-icon',href='#{site.favicon}')
 link(rel='alternate',type='application/rss+xml',title='#{site.name} &raquo; Feed',href='#{site.rssUrl}')
 link(href="/public/stylesheet/cosmo.css",rel="stylesheet")
