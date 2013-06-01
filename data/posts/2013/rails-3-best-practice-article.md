@@ -47,7 +47,7 @@ rails 3 best practice article
 
 ### 其他推薦閱讀
 
-* [The Rails 3 Way](http://tr3w.com/)
+* [The Rails 3 Way](http://www.amazon.com/Rails-Way-Addison-Wesley-Professional-Ruby/dp/0321601661)
 * [Ruby on Rails Guides](http://guides.rubyonrails.org/)
 * [The RSpec Book](http://pragprog.com/book/achbd/the-rspec-book)
 * [The Cucumber Book](http://pragprog.com/book/hwcuc/the-cucumber-book)
