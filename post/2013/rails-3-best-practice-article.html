@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="zh-TW"><head><title>Mind - rails 3 best practice article</title><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="keyword" content="pct, blog, Daniel Lin, 4press,rails 3 best practice article"><meta name="description" content="rails 3 best practice article"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta property="og:title" content="Mind - rails 3 best practice article"><meta property="og:type" content="website"><meta property="og:url" content="http://mind.deep.tw"><meta property="og:image" content="http://mind.deep.tw/images/avatar.jpg"><meta property="og:site_name" content="Mind"><meta property="og:description" content="rails 3 best practice article"><meta property="fb:admins" content="1514263143"><link rel="icon" type="image/x-icon" href="http://mind.deep.tw/favicon.ico"><link rel="alternate" type="application/rss+xml" title="Mind &raquo; Feed" href="http://mind.deep.tw/rss.xml"><link href="/public/stylesheet/cosmo.css" rel="stylesheet"><link href="/public/google-code-prettify/prettify.css" rel="stylesheet"><link href="/public/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet"><link href="/public/stylesheet/custom.css" rel="stylesheet"><!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script><![endif]--></head><body><div id="fb-root"></div><script>(function(d, s, id) {
+var js, fjs = d.getElementsByTagName(s)[0];
+if (d.getElementById(id)) return;
+js = d.createElement(s); js.id = id;
+js.src = "//connect.facebook.net/zh_TW/all.js#xfbml=1";
+fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script><div class="navbar navbar-inverse navbar-fixed-top"><div class="navbar-inner"><div class="container"><button type="button" data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="brand">Mind</a><div class="nav-collapse collapse"><ul class="nav"><li class="active"><a href="/">Home</a></li><li><a href="mailto:linpct@gmail.com">Mail</a></li><li><a href="https://github.com/pct" target="_blank">Github</a></li><li><a href="http://plurk.com/pct" target="_blank">Plurk</a></li><li><a href="https://twitter.com/daniel_freebsd" target="_blank">Twitter</a></li><li><a href="https://facebook.com/freebsd.py" target="_blank">Facebook</a></li><li><a href="https://github.com/pct" target="_blank"> </a></li></ul></div></div></div></div><div class="container main-container"><div class="row"><div class="span9"><h2 class="site_subtitle">read the world, read my soul</h2><hr><div class="row"><section><article><div data-href="http://mind.deep.tw/post/2013/rails-3-best-practice-article.html" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" style="float:right;" class="fb-like"></div><div class="inner text_post markdown"><h1>rails 3 best practice article</h1>
+<p>偶然間在臉書找技術文，發現這個連結：</p>
+<p><a href="https://github.com/JuanitoFatas/rails-style-guide/blob/master/README-zhTW.md">rails-style-guide</a></p>
+<p>其原文版：
+<a href="https://github.com/bbatsov/rails-style-guide">rails-style-guide</a></p>
+<p>一時間可能沒有辦法完全看完。</p>
+<h3>節錄一些推薦的 gem 如下：</h3>
+<ul>
+<li><a href="https://github.com/gregbell/active_admin">active_admin</a> - 有了 ActiveAdmin，創建 Rails 應用的管理介面就像兒戲。你會有一個很好的儀錶盤，圖形化 CRUD 介面以及更多東西。非常靈活且可客製化。</li>
+<li><a href="https://github.com/charliesome/better_errors">better_errors</a> - Better Errors 用更好更有效的錯誤頁面，取代了 Rails 標準的錯誤頁面。不僅可用在 Rails，任何將 Rack 當作中介軟體的 app 都可使用。</li>
+<li><a href="https://github.com/flyerhzm/bullet">bullet</a> - Bullet 就是為了幫助提昇應用的效能（藉由減少查詢）而打造的 gem。會在你開發應用時，替你注意你的查詢，並在需要 eager loading (N+1 查詢)時、或你在不必要的情況使用 eager loading 時，或是在應該要使用 counter cache 時，都會提醒你。</li>
+<li><a href="https://github.com/ryanb/cancan">cancan</a> - CanCan 是一個權限管理的 gem，
+讓你可以管制用戶可存取的支援。所有的授權都定義在一個檔案裡（ability.rb），並提供許多方便的方法，讓你檢查及確保整個應用內權限是否是可得的。</li>
+<li><a href="https://github.com/jnicklas/capybara">capybara</a> - Capybara 旨在簡化整合測試 Rack 應用的過程，像是 Rails、Sinatra 或 Merb。 Capybara 模擬了真實用戶使用 web 應用的互動。它與你測試在運行的驅動無關，並原生搭載 Rack::Test 及 Selenium 支持。透過外部 gem 支持 HtmlUnit、WebKit 及 env.js 。與 RSpec &amp; Cucumber 一起使用時工作良好。</li>
+<li><a href="https://github.com/jnicklas/carrierwave">carrierwave</a> - Rails 最後一個文件上傳解決方案。支持上傳檔案（及很多其它的酷玩意的）的本機儲存與雲端儲存。圖片後處理與 ImageMagick 整合得非常好。</li>
+<li><a href="https://github.com/bcardarella/client_side_validations">client_side_validations</a> -
+一個美妙的 gem，替你從現有的服務器端模型驗證自動產生 Javascript 用戶端驗證。高度推薦！</li>
+<li><a href="https://github.com/chriseppstein/compass">compass-rails</a> - 一個優秀的 gem，添加了某些 css 框架的支持。包括了 sass mixin 的蒐集，讓你減少 css 文件的程式碼並幫你解決瀏覽器相容問題。</li>
+<li><a href="https://github.com/cucumber/cucumber-rails">cucumber-rails</a> - Cucumber 是一個由 Ruby 所寫，開發功能測試的頂級工具。 cucumber-rails 提供了 Cucumber 的 Rails 整合。</li>
+<li><a href="https://github.com/plataformatec/devise">devise</a> - Devise 是 Rails 應用的一個完整解決方案。多數情況偏好使用 devise 來開始你的客制驗證方案。</li>
+<li><a href="http://fabricationgem.org/">fabrication</a> - 一個很好的假資料產生器（編輯者的選擇）。</li>
+<li><a href="https://github.com/thoughtbot/factory_girl">factory_girl</a> - 另一個 Fabrication 的選擇。一個成熟的假資料產生器。 Fabrication 的精神領袖先驅。</li>
+<li><a href="https://github.com/EmmanuelOga/ffaker">ffaker</a> - 實用的 gem 來產生仿造的資料（名字、地址，等等）。</li>
+<li><a href="https://github.com/pauldix/feedzirra">feedzirra</a> - 非常快速及靈活的 RSS 或 Atom 種子解析器。</li>
+<li><a href="https://github.com/norman/friendly_id">friendly_id</a> - 透過使用某些具描述性的模型屬性，而不是使用 id，允許你創建人類可讀的網址。</li>
+<li><a href="https://github.com/svenfuchs/globalize3.git">globalize3</a> - Globalize3 是 Globalize Gem 的後繼者，針對 ActiveRecord 3.x 設計。基於新的 I18n API 打造而成，並幫 ActiveRecord 模型新增了事務功能。</li>
+<li><a href="https://github.com/guard/guard">guard</a> - 極佳的 gem 監控文件變化及任務的調用。搭載了很多實用的擴充。遠優於 autotest 與 <a href="https://github.com/mynyml/watchr">watchr</a>。</li>
+<li><a href="https://github.com/indirect/haml-rails">haml-rails</a> - haml-rails 提供了 Haml 的 Rails 整合。</li>
+<li><a href="http://haml-lang.com">haml</a> - Haml 是一個簡潔的模型語言，被很多人認為（包括我）遠優於Erb。</li>
+<li><a href="https://github.com/amatsuda/kaminari">kaminari</a> - 很棒的分頁解決方案。</li>
+<li><a href="https://github.com/notahat/machinist">machinist</a> - 假資料不好玩，Machinist 才好玩。</li>
+<li><a href="https://github.com/rspec/rspec-rails">rspec-rails</a> - RSpec 是 Test::MiniTest 的取代者。我不高度推薦 RSpec。 rspec-rails 提供了 RSpec 的 Rails 整合。</li>
+<li><a href="https://github.com/plataformatec/simple_form">simple_form</a> - 一旦用過 simple_form（或 formatastic），你就不想聽到關於 Rails 預設的表單。它是一個創造表單很棒的 DSL。</li>
+<li><a href="https://github.com/fguillen/simplecov-rcov">simplecov-rcov</a> - 為了 SimpleCov 打造的 RCov formatter。若你想使用 SimpleCov 搭配 Hudson 持續整合服務器，很有用。</li>
+<li><a href="https://github.com/colszowka/simplecov">simplecov</a> - 程式碼覆蓋率工具。不像 RCov，完全相容 Ruby 1.9。產生精美的報告。必須用！</li>
+<li><a href="http://slim-lang.com">slim</a> - Slim 是一個簡潔的模版語言，被視為是遠遠優於 HAML(Erb 就更不用說了)的語言。唯一會阻止我大規模地使用它的是，主流 IDE 及編輯器對它的支持不好。但它的效能是非凡的。</li>
+<li><a href="https://github.com/sporkrb/spork">spork</a> - 一個給測試框架（RSpec 或現今 Cucumber）用的 DRb 服務器，每次運行前確保分支出一個乾淨的測試狀態。簡單的說，預載很多測試環境的結果是大幅降低你的測試啟動時間，絕對必須用！</li>
+<li><p><a href="https://github.com/sunspot/sunspot">sunspot</a> - 基於 SOLR 的全文檢索引擎。</p>
+</li>
+<li><p><a href="https://github.com/ddollar/foreman">foreman</a> - 若你的專案依賴各種外部的進程使用 foreman 來管理它們。</p>
+</li>
+</ul>
+<h3>其他推薦閱讀</h3>
+<ul>
+<li><a href="http://tr3w.com/">The Rails 3 Way</a></li>
+<li><a href="http://guides.rubyonrails.org/">Ruby on Rails Guides</a></li>
+<li><a href="http://pragprog.com/book/achbd/the-rspec-book">The RSpec Book</a></li>
+<li><a href="http://pragprog.com/book/hwcuc/the-cucumber-book">The Cucumber Book</a></li>
+<li><a href="https://leanpub.com/everydayrailsrspec">Everyday Rails Testing with RSpec</a> </li>
+</ul>
+</div><div class="footerwrap"><footer><div class="date">2013-06-01 05:45:20</div></footer></div><div data-href="http://mind.deep.tw/post/2013/rails-3-best-practice-article.html" data-num-posts="10" class="fb-comments"></div></article></section></div><!--<End>Main </End>--></div><div class="span3"><div class="well sidebar-nav"><div class="about"><h2>About me</h2><img src="/images/avatar.jpg" title="Daniel Lin"><p> </p><p>Daniel Lin, 網路暱稱 pct</p><p>專注在什麼都學，所以什麼都不專精</p><p>如果真要立個目標，那就是：<b>「為天地立心 為生民立命 為往聖繼絕學 為萬世開太平」</b></p><p>人生苦短，還想學的有：<b>中醫、武術</b>以及如何賺錢；趕快教我吧，拜託！</p><p> </p><h2>Work</h2><p> <b>A Web/App Developer</b></p><ul><li>php (slim, FuelPHP, myself)</li><li>python (django, pylons)</li><li>ruby (rails, sinatra)</li><li>javascript, coffeescript</li><li>iOS/Android App with Titanium Alloy</li></ul><p>work for <b><a href="http://4point-inc.com" target="_blank">四點設計</a></b></p><p></p></div><div class="articles"></div><div class="archive"></div></div><div class="plurk"><iframe src="http://www.plurk.com/getWidget?uid=3127252&amp;u_info=2&amp;bg=eeeeee&amp;tl=eeeeee" width="100%" frameborder="0" height="375" scrolling="no"></iframe></div></div></div><div class="footer_right row"><p>Powered by <a href="https://github.com/pct/4press" target="_blank">4press</a>, Themed by <a href="http://bootswatch.com/cosmo/" target="_blank">Bootswatch Cosmo</a></p></div></div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script><script src="/public/bootstrap/js/bootstrap.min.js"></script><script type="text/javascript">var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38544080-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();</script><script src="/public/google-code-prettify/prettify.js"></script><script>(function() {
+  var pres = document.getElementsByTagName('pre');
+  for (var i=0,l=pres.length; i<l; i++) {
+    pres[i].className = 'prettyprint';
+  }
+  prettyPrint();
+})();</script></body></html>
