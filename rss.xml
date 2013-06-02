@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sat, 01 Jun 2013 23:56:52 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails 3 best practice article]]></title><description><![CDATA[<h1>rails 3 best practice article</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sun, 02 Jun 2013 00:02:07 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails 3 best practice article]]></title><description><![CDATA[<h1>rails 3 best practice article</h1>
 <p>偶然間在臉書找技術文，發現這個連結：</p>
 <p><a href="https://github.com/JuanitoFatas/rails-style-guide/blob/master/README-zhTW.md">rails-style-guide</a></p>
 <p>其原文版：
@@ -327,6 +327,7 @@ service -h
 ]]></description><link>/post/2013/rails-carrierwave-image-format-error.html</link><guid isPermaLink="true">/post/2013/rails-carrierwave-image-format-error.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Mon, 29 Apr 2013 18:42:03 GMT</pubDate></item><item><title><![CDATA[rails CSRF notes]]></title><description><![CDATA[<h1>rails CSRF notes</h1>
 <h3>起源</h3>
 <p>在一個案子中，需要讓 user 不需「登入」就可以執行 post。然後不小心用 curl post 居然也可以寫入，實在令人驚訝！</p>
+<pre><code>2013/6/2 更新：rails 4 已經預設解決這樣的問題，所以使用 rails 4 請忽略以下廢文！</code></pre>
 <h3>環境</h3>
 <p>rails 3.2.13</p>
 <h3>發現</h3>
