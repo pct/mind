@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sun, 02 Jun 2013 00:02:07 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails 3 best practice article]]></title><description><![CDATA[<h1>rails 3 best practice article</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sun, 02 Jun 2013 04:13:20 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[FreeBSD Passenger 4.0.5 Cannot execute bash]]></title><description><![CDATA[<h1>FreeBSD Passenger 4.0.5 Cannot execute bash</h1>
+<h3>前言</h3>
+<p>原本用 Passenger 3.0.19 好好的，手癢更新 FreeBSD server, 卻遇到了這樣的訊息：</p>
+<pre><code>[ 2013-06-02 11:29:04.7868 23043/0x802060c00 Pool2/Spawner.h:159 ]: [App 23054 stderr] Cannot execute &quot;bash&quot;: No such file or directory (errno=2)
+terminate called after throwing an instance of &#39;std::bad_cast&#39;</code></pre>
+<h3>暫時解法</h3>
+<p>查資料發現這篇 <a href="https://groups.google.com/forum/?fromgroups#!topic/phusion-passenger/u0QN_F09UpI">Passenger 4.0.4/4.0.5 - Cannot execute &quot;bash&quot;</a></p>
+<p>於是直接用比較不好的解法：</p>
+<pre><code>sudo ln -s /usr/local/bin/bash /bin/bash</code></pre>
+<h3>結語</h3>
+<p>好心的 port maintainer, 會不會解決這個 issue 呢？</p>
+<p>前提是，該來 send-pr 先？</p>
+]]></description><link>/post/2013/freebsd-passenger-4.0.5-cannot-execute-bash.html</link><guid isPermaLink="true">/post/2013/freebsd-passenger-4.0.5-cannot-execute-bash.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Sun, 02 Jun 2013 03:52:35 GMT</pubDate></item><item><title><![CDATA[C in a nutshell notes]]></title><description><![CDATA[<h1>C in a nutshell notes</h1>
+<p><img src="http://ecx.images-amazon.com/images/I/813eelH3joL._SL1500_.jpg" alt="C in a Nutshell"></p>
+<p>沒錯，開始讀 C。</p>
+<p>雖然這本開宗明義就說：「這本不適合初學者」，不過還是先看看。</p>
+<p>為什麼要讀 C？因為就如同那句，「不想在巨壁裡被當家畜豢養著啊！」</p>
+<h3>不小心又繞遠路</h3>
+<p>這裡開始會放一些筆記，不過由於用 FreeBSD 桌面，沒有找到好用的 markdown editor, 所以分神找了一下。</p>
+<p>發現 <code>uberwriter</code> 跟 <code>retext</code> 這兩個用 python 寫的 editor, 只是，一個似乎缺 module 無法在 FreeBSD 用，一個需要 qt4，所以又放棄，先來用 vim 寫紀錄好了。</p>
+<h3>待續</h3>
+<p>因為繞遠路順便更新 FreeBSD server, 所以又有新東西要筆記，此篇暫時打住。</p>
+]]></description><link>/post/2013/c-in-a-nutshell-notes.html</link><guid isPermaLink="true">/post/2013/c-in-a-nutshell-notes.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Sun, 02 Jun 2013 02:33:16 GMT</pubDate></item><item><title><![CDATA[rails 3 best practice article]]></title><description><![CDATA[<h1>rails 3 best practice article</h1>
 <p>偶然間在臉書找技術文，發現這個連結：</p>
 <p><a href="https://github.com/JuanitoFatas/rails-style-guide/blob/master/README-zhTW.md">rails-style-guide</a></p>
 <p>其原文版：
