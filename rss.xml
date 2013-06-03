@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sun, 02 Jun 2013 11:09:51 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[The Clean Coder notes]]></title><description><![CDATA[<h1>The Clean Coder notes</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Mon, 03 Jun 2013 01:25:41 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[My Coder Profile]]></title><description><![CDATA[<h1>My Coder Profile</h1>
+<p>從閃光洽看來的，我的網址在：<a href="https://coderbits.com/pct">https://coderbits.com/pct</a></p>
+<p>有沒有看到那圓餅圖？</p>
+<p><img src="http://mind.deep.tw/images/foo/my-coder-profile.png" alt="pct&#39;s coder profile"></p>
+<p>有沒有發覺要對我說「你看看你！」</p>
+<p>可憐啊，半桶水，沒有找到自己要的東西，所以圓餅圖才會長這種德行....</p>
+<p>(以下省略 3000 字)</p>
+]]></description><link>/post/2013/my-coder-profile.html</link><guid isPermaLink="true">/post/2013/my-coder-profile.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Mon, 03 Jun 2013 01:20:31 GMT</pubDate></item><item><title><![CDATA[The Clean Coder notes]]></title><description><![CDATA[<h1>The Clean Coder notes</h1>
 <h3>前言</h3>
 <p>最近常買一些奇怪的書，寫一些奇怪的筆記。</p>
 <p>讓我們繼續看下去</p>
