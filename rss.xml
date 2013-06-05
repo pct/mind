@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 05 Jun 2013 05:53:08 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Arch BSD]]></title><description><![CDATA[<h1>Arch BSD</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 05 Jun 2013 23:50:28 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[4money 0.2.0 update]]></title><description><![CDATA[<h1>4money 0.2.0 update</h1>
+<p>在四點設計成立初期，小弟開發了 <a href="https://github.com/pct/4money">4money</a> 這個專案，作為公司報價單管理的系統。</p>
+<p>系統畫面如下：</p>
+<p><img src="http://mind.deep.tw/images/foo/4money-home.png" alt="4money 系統畫面"></p>
+<p>三年過去了，用這系統開報價單給客戶也還算滿意，只是前陣子終於也加入了「客戶最愛」的「含稅功能」。</p>
+<p>這功能很重要嘛？當然重要。</p>
+<p>現實生活你要接受的。</p>
+<p>畫面如下：</p>
+<p><img src="http://mind.deep.tw/images/foo/4money-tax.png" alt="4money 含稅功能"></p>
+<p>希望四點設計繼續發展，可以開發更多免費工具解決大家生活所需 :)</p>
+]]></description><link>/post/2013/4money-0.2.0-update.html</link><guid isPermaLink="true">/post/2013/4money-0.2.0-update.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Wed, 05 Jun 2013 23:37:43 GMT</pubDate></item><item><title><![CDATA[Arch BSD]]></title><description><![CDATA[<h1>Arch BSD</h1>
 <p>今天在噗浪看到<a href="http://www.plurk.com/p/ipjyok">這則噗</a>，有噗友發現<a href="http://archbsd.net/">ArchBSD</a>把我兩個最愛的作業系統整合在一起。</p>
 <p>有空的時候來玩一下，這個世界真的太奇妙了！</p>
 ]]></description><link>/post/2013/arch-bsd.html</link><guid isPermaLink="true">/post/2013/arch-bsd.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Wed, 05 Jun 2013 04:02:17 GMT</pubDate></item><item><title><![CDATA[My Coder Profile]]></title><description><![CDATA[<h1>My Coder Profile</h1>
