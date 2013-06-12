@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 05 Jun 2013 23:50:28 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[4money 0.2.0 update]]></title><description><![CDATA[<h1>4money 0.2.0 update</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 12 Jun 2013 00:29:17 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Feedly now powered by the feedly cloud]]></title><description><![CDATA[<h1>Feedly now powered by the feedly cloud</h1>
+<h3>本文</h3>
+<p><a href="http://www.feedly.com/">Feedly</a>, 一個問世以來就一直用的服務，取代 Google Reader 排版、方便快速瀏覽 RSS 的服務。</p>
+<p>在 Google Reader 放出風聲，即將在 2013/07/01 停止服務的同時，多家廠商已在默默耕耘自己的服務；如今，我最喜歡的 Feedly, 從一開始付費購買的 Feedly beta app 到現在免費 app，在今天宣布 <a href="https://itunes.apple.com/us/app/feedly-your-google-reader/id396069556?mt=8">feedly app 16.0.1 update</a> </p>
+<pre><code>What&#39;s New in Version 16.0.1
+Now powered by the feedly cloud. Let&#39;s all wish a happy retirement to Google Reader. </code></pre>
+<p><img src="http://mind.deep.tw/images/foo/feedly-cloud.png" alt="feedly app 16.0.1 update"></p>
+<h3>結語</h3>
+<p>希望大叔如我，可以在短暫的人生發展出自己開心的產品，自立自強，要不，人生下一階段就是阿伯了，時間真的過得超快的！</p>
+]]></description><link>/post/2013/feedly-now-powered-by-the-feedly-cloud.html</link><guid isPermaLink="true">/post/2013/feedly-now-powered-by-the-feedly-cloud.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Wed, 12 Jun 2013 00:14:19 GMT</pubDate></item><item><title><![CDATA[4money 0.2.0 update]]></title><description><![CDATA[<h1>4money 0.2.0 update</h1>
 <p>在四點設計成立初期，小弟開發了 <a href="https://github.com/pct/4money">4money</a> 這個專案，作為公司報價單管理的系統。</p>
 <p>系統畫面如下：</p>
 <p><img src="http://mind.deep.tw/images/foo/4money-home.png" alt="4money 系統畫面"></p>
