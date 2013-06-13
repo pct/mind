@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 12 Jun 2013 00:29:17 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Feedly now powered by the feedly cloud]]></title><description><![CDATA[<h1>Feedly now powered by the feedly cloud</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Thu, 13 Jun 2013 14:05:55 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Startup because there is no other way]]></title><description><![CDATA[<h1>Startup because there is no other way</h1>
+<p>今天看某雜誌(對，明明說不要看什麼雜誌的，我卻又看了)，有句話是這樣說的，「因為對人生有一種渴望，我們都走向創業路」。</p>
+<p>我還沒看完，就萌生了這樣的想法：沒錯啊，有些人創業是為了渴望，而我真的不是，我是因為絕望，沒有後路。</p>
+<p>某個指路明燈就這樣說，因為家境好的孩子，還願意創業、幫助人，實在難能可貴。我完全同意，我很難想像如果今天我家境不錯，我是不是還要這樣瞎忙只求未來可以活得下去？何況還能想到要去幫助別人？我只需要當個伸手牌就好了，對吧？</p>
+<p>看了雜誌的各家創業夢，很美，很厲害、很好、很強大；已經是大叔的我，要如何為自己看似沒有明天的人生，力挽狂瀾呢？</p>
+<p>從每個月跟父母要錢開始？別傻了，真的以為我這每逢佳節便傷心的人有誰可以伸手？</p>
+<p>人生，從 there is no other way 開始，也會走著 there is no other way 的路繼續前進；目標遙遠，但是路只有這樣的一條，前進，就是了。</p>
+<p>什麼苦都是假的，別忘了自己三年前的六月一號，開始學著自在呼吸。人生，真的就是從 there is no other way 開始，我握著拳，將前面的路，就這樣繼續走著。</p>
+]]></description><link>/post/2013/startup-because-there-is-no-other-way.html</link><guid isPermaLink="true">/post/2013/startup-because-there-is-no-other-way.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Thu, 13 Jun 2013 01:39:55 GMT</pubDate></item><item><title><![CDATA[Feedly now powered by the feedly cloud]]></title><description><![CDATA[<h1>Feedly now powered by the feedly cloud</h1>
 <h3>本文</h3>
 <p><a href="http://www.feedly.com/">Feedly</a>, 一個問世以來就一直用的服務，取代 Google Reader 排版、方便快速瀏覽 RSS 的服務。</p>
 <p>在 Google Reader 放出風聲，即將在 2013/07/01 停止服務的同時，多家廠商已在默默耕耘自己的服務；如今，我最喜歡的 Feedly, 從一開始付費購買的 Feedly beta app 到現在免費 app，在今天宣布 <a href="https://itunes.apple.com/us/app/feedly-your-google-reader/id396069556?mt=8">feedly app 16.0.1 update</a> </p>
