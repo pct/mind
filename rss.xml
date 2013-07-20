@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 03 Jul 2013 02:54:00 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[node build error vfpv3 and python version]]></title><description><![CDATA[<h1>node build error vfpv3 and python version</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sat, 20 Jul 2013 08:54:05 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[FreeBSD use clang when OSVERSION greater than 900033]]></title><description><![CDATA[<h1>FreeBSD use clang when OSVERSION greater than 900033</h1>
+<h3>緣起</h3>
+<p>你知道 FreeBSD 的 www/node-devel 從 0.11.1 之後，就沒有更新了嘛？明明已經到 0.11.4 了說。</p>
+<h3>發現</h3>
+<p>查找 Error log 說：</p>
+<pre><code>../deps/v8/include/v8.h:6215: sorry, unimplemented: 
+inlining failed in call to &#39;v8::Handlev8::Primitive v8::Null(v8::Isolate*)&#39;: function not inlinable</code></pre>
+<p>然後 <a href="https://github.com/joyent/node/issues/5568"><a href="https://github.com/joyent/node/issues/5568">https://github.com/joyent/node/issues/5568</a></a> 這篇給了靈感。</p>
+<p>那不就是因為 FreeBSD 內建 GCC 還停留在 <code>gcc version 4.2.1 20070831 patched [FreeBSD]</code> 所造成？</p>
+<h3>解決方式</h3>
+<p>看了其他的 ports，將以下判斷加進 Makefile，測試後果然 OK！</p>
+<pre><code>.include &lt;bsd.port.options.mk&gt;
+
+.if ${OSVERSION} &gt;= 900033 &amp;&amp; exists(/usr/bin/clang)
+CC=     clang
+CXX=    clang++
+GYP_DEFINES+=   clang=1
+.else
+USE_GCC?=       4.6+
+GYP_DEFINES+=   gcc_version=${CXX:S/g++//}
+.endif</code></pre>
+<p>目前已經 send-pr 了，就看看 committer 看了這段有無要修改了。</p>
+]]></description><link>/post/2013/freebsd-use-clang-when-osversion-greater-than-900033.html</link><guid isPermaLink="true">/post/2013/freebsd-use-clang-when-osversion-greater-than-900033.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Fri, 19 Jul 2013 19:42:40 GMT</pubDate></item><item><title><![CDATA[node build error vfpv3 and python version]]></title><description><![CDATA[<h1>node build error vfpv3 and python version</h1>
 <h3>前言</h3>
 <p>由於某年的 H4 聚會，發現了 node 跟 v8，所以那時就開始想把 node porting 到 FreeBSD 上。那時，是 node 版本還在 0.1 的年代…</p>
 <p>人老的時候，總是會回顧一下年輕的時候做了什麼荒唐事，然後再回頭發現自己現在一事無成：</p>
