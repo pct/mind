@@ -1,5 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Sat, 20 Jul 2013 08:54:05 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[FreeBSD use clang when OSVERSION greater than 900033]]></title><description><![CDATA[<h1>FreeBSD use clang when OSVERSION greater than 900033</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Tue, 23 Jul 2013 02:26:21 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[FreeBSD rubygem passenger with rake nginx]]></title><description><![CDATA[<h1>FreeBSD rubygem passenger with rake nginx</h1>
+<h3>事由</h3>
+<p>最近在 FreeBSD 使用 rails4，遇到一點小問題。因為沒有使用 www/rubygem-passenger 而是自己用 gem install passenger，導致什麼找不到 watchdog 之類的 nginx 問題。</p>
+<p>其實這也不限於 FreeBSD，而是 Linux 也要有，所以這是必備步驟？(如果不是使用一些幫你什麼都準備好的系統的話)</p>
+<h3>解決方式</h3>
+<p>查找別人的心得，以及使用 www/rubygem-passenger 時，都有這個項目，就是：</p>
+<pre><code># cd `passenger-config --root`
+# rake nginx</code></pre>
+<p>不管是 FreeBSD or Linux，照做後就好了。</p>
+<h3>然後就沒有其他問題了？</h3>
+<p>才不。</p>
+<p>因為 passenger + nginx 實際 run 的時候，看來某些 code 是針對 Linux 寫的，所以才有 ls -v 這樣的 error：</p>
+<pre><code>ERROR: cannot execute command &#39;lsof&#39;: errno=2
+Falling back to another mechanism for dumping file descriptors.
+ls: illegal option -- v
+usage: ls [-ABCFGHILPRSTUWZabcdfghiklmnopqrstuwx1] [-D format] [file ...]
+ERROR: Could not run &#39;ls&#39; to dump file descriptor information!</code></pre>
+<p>以及，偶爾你也會遇到明明 FreeBSD 主機就有裝 bash, 但是 passenger 照樣報錯，說找不到 bash command。
+此時，你也就先這樣解決： </p>
+<pre><code># ln -s /usr/local/bin/bash /bin/bash</code></pre>
+<h3>既然問題那麼多(有嗎？)你怎不學大家用 Linux 就好？</h3>
+<p>原點。</p>
+<p>我是為了 FreeBSD 才走岔路的，要不現在應該也是在某小報被長官壓迫寫一些自己不喜歡的文章來娛樂小眾吧。</p>
+]]></description><link>/post/2013/freebsd-rubygem-passenger-with-rake-nginx.html</link><guid isPermaLink="true">/post/2013/freebsd-rubygem-passenger-with-rake-nginx.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Tue, 23 Jul 2013 02:09:54 GMT</pubDate></item><item><title><![CDATA[FreeBSD use clang when OSVERSION greater than 900033]]></title><description><![CDATA[<h1>FreeBSD use clang when OSVERSION greater than 900033</h1>
 <h3>緣起</h3>
 <p>你知道 FreeBSD 的 www/node-devel 從 0.11.1 之後，就沒有更新了嘛？明明已經到 0.11.4 了說。</p>
 <h3>發現</h3>
