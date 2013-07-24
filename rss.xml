@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Tue, 23 Jul 2013 02:26:21 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[FreeBSD rubygem passenger with rake nginx]]></title><description><![CDATA[<h1>FreeBSD rubygem passenger with rake nginx</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 24 Jul 2013 11:23:58 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[FreeBSD rbenv install ruby 2.0]]></title><description><![CDATA[<h1>FreeBSD rbenv install ruby 2.0</h1>
+<p>因為，所以。</p>
+<p>FreeBSD 10.0-CURRENT 已經是用 clang 而非 gcc，所以在 rbenv 找不到 gcc 的情況下，只要這樣：</p>
+<pre><code>CC=/usr/bin/clang rbenv-install 2.0.0-p247</code></pre>
+<p>解決。</p>
+<p>參考來源(對方是在 Mac 環境下遇到)：<a href="http://accretiondisc.com/blog/2012/08/20/more-rbenv-notes/"><a href="http://accretiondisc.com/blog/2012/08/20/more-rbenv-notes/">http://accretiondisc.com/blog/2012/08/20/more-rbenv-notes/</a></a></p>
+<p>所以這樣廢文又一篇了 :)</p>
+]]></description><link>/post/2013/freebsd-rbenv-install-ruby-2.0.html</link><guid isPermaLink="true">/post/2013/freebsd-rbenv-install-ruby-2.0.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Tue, 23 Jul 2013 23:16:13 GMT</pubDate></item><item><title><![CDATA[FreeBSD rubygem passenger with rake nginx]]></title><description><![CDATA[<h1>FreeBSD rubygem passenger with rake nginx</h1>
 <h3>事由</h3>
 <p>最近在 FreeBSD 使用 rails4，遇到一點小問題。因為沒有使用 www/rubygem-passenger 而是自己用 gem install passenger，導致什麼找不到 watchdog 之類的 nginx 問題。</p>
 <p>其實這也不限於 FreeBSD，而是 Linux 也要有，所以這是必備步驟？(如果不是使用一些幫你什麼都準備好的系統的話)</p>

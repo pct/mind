@@ -205,6 +205,11 @@
             "file": "data/posts/2013/freebsd-rubygem-passenger-with-rake-nginx.md",
             "ctime": "2013-07-23 10:09:54",
             "mtime": "2013-07-23 10:09:54"
+        },
+        {
+            "file": "data/posts/2013/freebsd-rbenv-install-ruby-2.0.md",
+            "ctime": "2013-07-24 07:16:13",
+            "mtime": "2013-07-24 07:16:13"
         }
     ]
 }
