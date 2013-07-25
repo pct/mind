@@ -1,5 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Wed, 24 Jul 2013 11:23:58 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[FreeBSD rbenv install ruby 2.0]]></title><description><![CDATA[<h1>FreeBSD rbenv install ruby 2.0</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Thu, 25 Jul 2013 03:17:51 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[FreeBSD vim lite build error undefined reference to libintl_gettext]]></title><description><![CDATA[<h1>FreeBSD vim lite build error undefined reference to libintl_gettext</h1>
+<h3>環境</h3>
+<p>FreeBSD 10.0-CURRENT</p>
+<p>欲更新為 vim-7.3.1314</p>
+<h3>疑問？</h3>
+<p>還是不曉得為什麼會發生這樣的事，<del>有空來研究一下</del>好了</p>
+<pre><code>objects/buffer.o: In function `sign_list_placed&#39;: 
+buffer.c:(.text+0x368): undefined reference to `libintl_gettext&#39; 
+buffer.c:(.text+0x3bd): undefined reference to `libintl_gettext&#39; 
+buffer.c:(.text+0x415): undefined reference to `libintl_gettext&#39; </code></pre>
+<p>別人也有遇到相同的問題：<a href="http://www.freebsd.org/cgi/query-pr.cgi?pr=168287"><a href="http://www.freebsd.org/cgi/query-pr.cgi?pr=168287">http://www.freebsd.org/cgi/query-pr.cgi?pr=168287</a></a></p>
+<h3>解法？</h3>
+<p>然後看到這篇 <a href="http://www.mavetju.org/mail/view_message.php?list=freebsd-ports&amp;id=3746713"><a href="http://www.mavetju.org/mail/view_message.php?list=freebsd-ports&amp;id=3746713">http://www.mavetju.org/mail/view_message.php?list=freebsd-ports&amp;id=3746713</a></a></p>
+<p>所以來 try 一下：</p>
+<pre><code>  make -C /usr/ports/editors/vim-lite configure post-configure all</code></pre>
+<p>確定 pass。</p>
+<p>所以直接：</p>
+<pre><code>  make -C /usr/ports/editors/vim configure post-configure install</code></pre>
+<p>解決本次的問題。</p>
+<p>但這顯然不是這樣解。</p>
+<h3>研究？</h3>
+<p>實際取得 vim-7.3，不透過 ports 安裝，所以沒有 Makefile 的干擾，單純：</p>
+<pre><code>$ ./configure &amp;&amp; make</code></pre>
+<p>這樣也是 pass 的。</p>
+<p>所以，<del>找時間</del>來 send-pr？應該問題就出在 ports patch 到不該 patch 的地方吧？</p>
+]]></description><link>/post/2013/freebsd-vim-lite-build-error-undefined-reference-to-libintl_gettext.html</link><guid isPermaLink="true">/post/2013/freebsd-vim-lite-build-error-undefined-reference-to-libintl_gettext.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Thu, 25 Jul 2013 02:40:05 GMT</pubDate></item><item><title><![CDATA[FreeBSD rbenv install ruby 2.0]]></title><description><![CDATA[<h1>FreeBSD rbenv install ruby 2.0</h1>
 <p>因為，所以。</p>
 <p>FreeBSD 10.0-CURRENT 已經是用 clang 而非 gcc，所以在 rbenv 找不到 gcc 的情況下，只要這樣：</p>
 <pre><code>CC=/usr/bin/clang rbenv-install 2.0.0-p247</code></pre>

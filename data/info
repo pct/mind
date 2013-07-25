@@ -210,6 +210,11 @@
             "file": "data/posts/2013/freebsd-rbenv-install-ruby-2.0.md",
             "ctime": "2013-07-24 07:16:13",
             "mtime": "2013-07-24 07:16:13"
+        },
+        {
+            "file": "data/posts/2013/freebsd-vim-lite-build-error-undefined-reference-to-libintl_gettext.md",
+            "ctime": "2013-07-25 10:40:05",
+            "mtime": "2013-07-25 10:40:05"
         }
     ]
 }
