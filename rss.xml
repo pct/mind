@@ -1,5 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Thu, 25 Jul 2013 03:17:51 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[FreeBSD vim lite build error undefined reference to libintl_gettext]]></title><description><![CDATA[<h1>FreeBSD vim lite build error undefined reference to libintl_gettext</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Fri, 26 Jul 2013 16:04:52 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[gem install mysql2 failed but you could replace mysql with mariadb first]]></title><description><![CDATA[<h1>gem install mysql2 failed but you could replace mysql with mariadb first</h1>
+<h3>緣由</h3>
+<p>環境：Mac 10.7 and 10.8</p>
+<p>欲安裝/更新 gem mysql2</p>
+<h3>錯誤訊息</h3>
+<pre><code>Fetching: mysql2-0.3.13.gem (100%)
+Building native extensions.  This could take a while...
+ERROR:  Error installing mysql2:
+    ERROR: Failed to build gem native extension.
+
+    /Users/pct/.rvm/rubies/ruby-2.0.0-p247/bin/ruby extconf.rb
+checking for rb_thread_blocking_region()... yes
+checking for rb_wait_for_single_fd()... yes
+checking for rb_hash_dup()... yes
+checking for rb_intern3()... yes
+checking for mysql.h... no
+checking for mysql/mysql.h... no
+-----
+mysql.h is missing.  please check your installation of mysql and try again.
+-----
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+    --with-opt-dir
+    --with-opt-include
+    --without-opt-include=${opt-dir}/include
+    --with-opt-lib
+    --without-opt-lib=${opt-dir}/lib
+    --with-make-prog
+    --without-make-prog
+    --srcdir=.
+    --curdir
+    --ruby=/Users/pct/.rvm/rubies/ruby-2.0.0-p247/bin/ruby
+    --with-mysql-config
+    --without-mysql-config</code></pre>
+<h3>偷懶解決方式</h3>
+<pre><code>$ brew remove mysql
+$ brew install mariadb
+$ gem install mysql2</code></pre>
+<h3>實際解決方式？</h3>
+<p>還沒測，但就趁機換 mariadb 了 :)</p>
+]]></description><link>/post/2013/gem-install-mysql2-failed-but-you-could-replace-mysql-with-mariadb-first.html</link><guid isPermaLink="true">/post/2013/gem-install-mysql2-failed-but-you-could-replace-mysql-with-mariadb-first.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Sat, 27 Jul 2013 04:00:16 GMT</pubDate></item><item><title><![CDATA[FreeBSD vim lite build error undefined reference to libintl_gettext]]></title><description><![CDATA[<h1>FreeBSD vim lite build error undefined reference to libintl_gettext</h1>
 <h3>環境</h3>
 <p>FreeBSD 10.0-CURRENT</p>
 <p>欲更新為 vim-7.3.1314</p>
