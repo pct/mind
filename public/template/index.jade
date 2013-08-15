@@ -7,13 +7,13 @@ append content
         .fb-like(data-href="#{site.siteUrl}#{item.url}", data-send='false', data-layout='button_count', data-width='450', data-show-faces='false', style="float:right;")
         .p
           h1
-            a(href="#{item.url}") # #{item.title}
+            a(href="#{site.siteUrl}#{item.url}") # #{item.title}
           | !{(item.content).replace('<h1>' + item.title + '</h1>', "")}
         .footerwrap
           footer
             .date Date: #{item.time}
             .link
-              a(href="#{item.url}") comments
+              a(href="#{site.siteUrl}#{item.url}") comments
       hr
     - })
 
@@ -25,7 +25,7 @@ append article
         ul
           - items.forEach(function(item) {
             li
-              a(href="#{item.url}", title="#{item.title}") #{item.title}
+              a(href="#{site.siteUrl}#{item.url}", title="#{item.title}") #{item.title}
           - })
   
 append archive
@@ -36,7 +36,7 @@ append archive
         ul
           - archives.forEach(function(item) {
             li
-              a(href="#{item.url}", title="#{item.title}") #{item.title}
+              a(href="#{site.siteUrl}#{item.url}", title="#{item.title}") #{item.title}
           - })
 
 append script

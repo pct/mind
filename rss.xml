@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Fri, 26 Jul 2013 16:04:52 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[gem install mysql2 failed but you could replace mysql with mariadb first]]></title><description><![CDATA[<h1>gem install mysql2 failed but you could replace mysql with mariadb first</h1>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Mind]]></title><description><![CDATA[read the world, read my soul]]></description><link>http://mind.deep.tw</link><image><url>http://mind.deep.tw/favicon.ico</url><title>Mind</title><link>http://mind.deep.tw</link></image><generator>NodeJS RSS Module</generator><lastBuildDate>Thu, 15 Aug 2013 06:12:58 GMT</lastBuildDate><atom:link href="http:/mind.deep.tw/rss.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[rails plugin notes]]></title><description><![CDATA[<h1>rails plugin notes</h1>
+<p>人生難免想要長進一下，所以也要逐步把常常再用的東西都模組化。</p>
+<p>參考：</p>
+<ol>
+<li><a href="http://stackoverflow.com/questions/6118905/rails-3-1-engine-vs-mountable-app">Rails 3.1: Engine vs. Mountable App</a></li>
+<li><a href="http://guides.rubyonrails.org/plugins.html">The Basics of Creating Rails Plugins</a></li>
+<li><a href="http://edgeguides.rubyonrails.org/engines.html">Getting Started with Engines</a></li>
+</ol>
+<p>感謝朋友們給建議，該學的還是要自己來 :)</p>
+<p>接著就是想一下 prefix, 然後開始寫些看似可以用的東西來 open source 吧 :)</p>
+]]></description><link>/post/2013/rails-plugin-notes.html</link><guid isPermaLink="true">/post/2013/rails-plugin-notes.html</guid><dc:creator><![CDATA[pct]]></dc:creator><pubDate>Wed, 14 Aug 2013 17:39:18 GMT</pubDate></item><item><title><![CDATA[gem install mysql2 failed but you could replace mysql with mariadb first]]></title><description><![CDATA[<h1>gem install mysql2 failed but you could replace mysql with mariadb first</h1>
 <h3>緣由</h3>
 <p>環境：Mac 10.7 and 10.8</p>
 <p>欲安裝/更新 gem mysql2</p>
