@@ -33,9 +33,5 @@ pre.prettyprint {
   padding-left: 10px;
 }
 
+body { padding-top: 70px; }
 
-@media (min-width: 979px) {
-  .main-container {
-    margin-top: 50px;
-  }
-}

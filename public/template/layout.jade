@@ -14,20 +14,20 @@ html(lang="zh-TW")
         }(document, 'script', 'facebook-jssdk'));
 
     .navbar.navbar-inverse.navbar-fixed-top
-      .navbar-inner
-        .container
-          button.btn.btn-navbar(type='button', data-toggle='collapse', data-target='.nav-collapse')
+      .container
+        .navbar-header
+          a.navbar-brand(href='/') #{site.name}
+          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
             span.icon-bar
             span.icon-bar
             span.icon-bar
-          a.brand(href='/') #{site.name}
-          .nav-collapse.collapse
-            ul.nav
-              include includes/nav
-    
+        .navbar-collapse.collapse
+          ul.nav.navbar-nav
+            include includes/nav
+   
     .container.main-container
       .row
-        .span9
+        .col.col-sm-9
           h2.site_subtitle #{site.description}
           hr
           
@@ -37,7 +37,7 @@ html(lang="zh-TW")
           //
              End Main 
 
-        .span3
+        .col.col-sm-3
           .well.sidebar-nav
             .about
               include includes/about
