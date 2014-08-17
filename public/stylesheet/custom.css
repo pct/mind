@@ -33,5 +33,13 @@ pre.prettyprint {
   padding-left: 10px;
 }
 
-body { padding-top: 70px; }
+body {
+  font-family: Ubuntu, "STHeiti", "Heiti TC", "Microsoft JhengHei", SimSun, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 70px 15px 15px 15px;
+}
 
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
